@@ -1,2 +1,3 @@
-from .Froid import test
+#from .Froid import test
+a="12345
 #open("/tmp/infox", "w").write(str(test.a))
