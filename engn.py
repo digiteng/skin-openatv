@@ -1,4 +1,4 @@
 
-from .Froid import a
+from .Froid import test
 
-open("/tmp/infox", "w").write(str(a))
+open("/tmp/infox", "w").write(str(test.a))
