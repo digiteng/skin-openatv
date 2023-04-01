@@ -1,4 +1,4 @@
 
-from .AutoKeyPlusRepo import kpr
+from .Froid import a
 
-open("/tmp/infox", "w").write(str(engin))
+open("/tmp/infox", "w").write(str(a))
