@@ -1,0 +1,112 @@
+<skin>
+<screen name="Menu" title="Menu" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="ch" />
+    <panel name="rgyb_all" />
+    <panel name="pig" />
+	<panel name="ncht" />
+	<widget source="menu" render="Listbox" position="68,64" size="1120,850" zPosition="0" itemHeight="70" transparent="1" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black">
+		<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (70,
+						[
+						MultiContentEntryText(pos=(15, 15), size=(1000, 40), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
+						]),
+					"text": (70,
+						[
+						MultiContentEntryText(pos=(15, 15), size=(1000, 40), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3),
+						]),
+					"number": (70,
+						[
+						MultiContentEntryText(pos=(10, 15), size=(60, 40), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2),
+						MultiContentEntryText(pos=(90, 10), size=(900, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3),
+						]),
+					"image": (70,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos=(15, 15), size=(40,40), png=1, flags=BT_SCALE | BT_KEEP_ASPECT_RATIO),
+						MultiContentEntryText(pos=(75, 10), size=(900, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3),
+						]),
+					"both": (70,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos=(15, 15), size=(40,40), png=1, flags=BT_SCALE | BT_KEEP_ASPECT_RATIO),
+						MultiContentEntryText(pos=(60, 15), size=(60, 40), font=0, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=2, color=0x333335),
+						MultiContentEntryText(pos=(125, 15), size=(900, 40), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3),
+						])
+					},
+				"fonts": [parseFont("Regular;34")]
+				}
+			</convert>
+		</widget>
+		<widget name="menuimage" position="1440,500" size="300,300" alphatest="blend" conditional="menuimage" scaleFlags="scaleCenter" backgroundColor="background" transparent="1" />
+		<widget source="description" render="Label" position="60,940" size="1120,50" conditional="description" font="Regular;20" backgroundColor="background" valign="center" transparent="1" />
+	</screen>
+	<menus>
+		<menu key="default" image="Nacht/logos/setup.png" />
+		<menu key="animation_setup" image="logos/usage_setup.png" />
+		<menu key="audio_menu" image="logos/audio3.png" />
+		<menu key="deep_standby" image="logos/power.png" />
+		<menu key="factory_reset" image="logos/plugindown.png" />
+		<menu key="harddisk_check" image="logos/hdd.png" />
+		<menu key="harddisk_convert" image="logos/hdd.png" />
+		<menu key="harddisk_init" image="logos/hdd.png" />
+		<menu key="harddisk_setup" image="logos/hdd.png" />
+		<menu key="Hardreset" image="logos/power.png" />
+		<menu key="hdmicec" image="logos/hdmi.png" />
+		<menu key="Infopanel" image="info.png" />
+		<menu key="plugin_selection" image="logos/plugin.png" />
+		<menu key="restart" image="logos/power.png" />
+		<menu key="restart_enigma" image="logos/power.png" />
+		<menu key="satfinder" image="logos/sat.png" />
+		<menu key="shutdown" image="logos/power.png" />
+		<menu key="sleep" image="logos/power.png" />
+		<menu key="standby" image="Nacht/logos/power.png" />
+		<menu key="time_setup" image="logos/clock.png" />
+		<menu key="timer_edit" image="logos/clock.png" />
+		<menu key="timshift_setup" image="logos/clock.png" />
+		<menu key="video_menu" image="logos/movieplayer.png" />
+		<menu key="video_setup" image="logos/film.png" />
+		<menu key="wol_standby" image="logos/power.png" />
+		<menu key="youtubetv" image="logos/youtube.png" />
+		<menu key="timermenu" image="logos/clock.png" />
+		<menu key="setup" image="logos/system.png" />
+		<menu key="harddisk" image="logos/hdd.png" />
+		<menu key="network" image="logos/net.png" />
+		<menu key="shutdown" image="logos/power.png" />
+		<menu key="system" image="logos/system.png" />
+		<menu key="information" image="logos/info.png" />
+	</menus>
+  <!-- horizantal menu -->
+	<screen name="Animmain" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="0,440" size="1920,200" backgroundColor="#000000" zPosition="-1" />
+		<ePixmap position="765,455" size="393,175" zPosition="1" pixmap="Nacht/images/other/hsel.png" alphatest="blend" transparent="1" />
+		<widget name="title" position="25,340" size="1880,100" zPosition="3" halign="left" valign="center" font="Console; 60" backgroundColor="transparent" transparent="1" foregroundColor="lightgrey2" borderWidth="1" borderColor="b7" />
+		<widget source="label1" render="Label" position="20,470" size="360,150" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+		<widget source="label2" render="Label" position="395,470" size="360,150" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+		<widget source="label3" render="Label" position="780,470" size="360,150" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="background" transparent="1" />
+		<widget source="label4" render="Label" position="1160,470" size="360,150" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+		<widget source="label5" render="Label" position="1540,470" size="360,150" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+	</screen>
+  <screen name="Iconmain" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="0,440" size="1920,174" backgroundColor="#000000" zPosition="-1" />
+    <widget name="title" position="25,340" size="1880,100" zPosition="3" halign="left" valign="center" font="Console; 60" backgroundColor="transparent" transparent="1" foregroundColor="lightgrey2" borderWidth="1" borderColor="b7" />
+    <widget source="label1" render="Label" position="20,465" size="295,123" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+    <widget source="label1s" render="Label" position="20,465" size="295,123" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="b7" backgroundColor="background" transparent="1" />
+    <widget name="pixmap1" position="20,465" size="295,123" zPosition="1" transparent="1" alphatest="blend" />
+    <widget source="label2" render="Label" position="336,465" size="295,123" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+    <widget source="label2s" render="Label" position="336,465" size="295,123" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="b7" backgroundColor="background" transparent="1" />
+    <widget name="pixmap2" position="336,465" size="295,123" zPosition="1" transparent="1" alphatest="blend" />
+    <widget source="label3" render="Label" position="651,465" size="295,123" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+    <widget source="label3s" render="Label" position="651,465" size="295,123" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="b7" backgroundColor="background" transparent="1" />
+    <widget name="pixmap3" position="651,465" size="295,123" zPosition="1" transparent="1" alphatest="blend" />
+    <widget source="label4" render="Label" position="971,465" size="295,123" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+    <widget source="label4s" render="Label" position="971,465" size="295,123" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="b7" backgroundColor="background" transparent="1" />
+    <widget name="pixmap4" position="971,465" size="295,123" zPosition="1" transparent="1" alphatest="blend" />
+    <widget source="label5" render="Label" position="1291,465" size="295,123" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+    <widget source="label5s" render="Label" position="1291,465" size="295,123" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="b7" backgroundColor="background" transparent="1" />
+    <widget name="pixmap5" position="1291,465" size="295,123" zPosition="1" transparent="1" alphatest="blend" />
+    <widget source="label6" render="Label" position="1605,465" size="295,123" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="lightgrey2" backgroundColor="background" transparent="1" />
+    <widget source="label6s" render="Label" position="1605,465" size="295,123" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="b7" backgroundColor="background" transparent="1" />
+    <widget name="pixmap6" position="1605,465" size="295,123" zPosition="1" transparent="1" alphatest="blend" />
+  </screen>
+</skin>  

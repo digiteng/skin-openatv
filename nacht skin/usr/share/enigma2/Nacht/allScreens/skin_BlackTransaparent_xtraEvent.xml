@@ -1,0 +1,58 @@
+<skin>
+	<colors>
+		<color name="background" value="#40000000" />
+		<color name="black2" value="#40000000" />
+		<color name="tb" value="#40000000" />
+		<color name="csd" value="#006bffc6" />
+		<color name="csds" value="#0097ffd7" />
+	</colors>
+	<screen name="ncht">
+		<ePixmap name="" pixmap="Nacht/logos/nacht_X.png" position="1325,65" size="500,300" transparent="0" alphatest="blend" zPosition="1" />
+	</screen>
+	<screen name="pig">
+		<widget source="ServiceEvent" render="xtraPoster" position="1275,65" size="185,278" zPosition="2" cornerRadius="20" />
+		<widget source="ServiceEvent" render="xtraBackdrop" position="1275,145" size="185,100" zPosition="1" cornerRadius="10" />
+		<widget source="ServiceEvent" render="xtraParental" position="1400,282" size="60,60" alphatest="blend" zPosition="9" transparent="1" />
+		<widget source="ServiceEvent" render="xtraStar2" position="1275,355" size="200,20" alphatest="blend" transparent="1" zPosition="9" />
+		<widget source="ServiceEvent" render="Label" position="1475,65" size="400,278" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+		<convert type="xtraInfo">Title,Year,Rated,Genre,Type,Country,Duration,SE</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1485,350" size="270,30" font="Regular; 24" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+			<convert type="xtraInfo">imdbRating</convert>
+		</widget>
+<!-- epg -->
+
+		<widget source="Event" render="xtraPoster" position="1275,65" size="185,278" zPosition="2" cornerRadius="20" />
+		<widget source="Event" render="xtraBackdrop" position="1275,145" size="185,100" zPosition="1" cornerRadius="10" />
+		<widget source="Event" render="xtraParental" position="1400,282" size="60,60" alphatest="blend" zPosition="9" transparent="1" />
+		<widget source="Event" render="xtraStar2" position="1275,355" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+		<widget source="Event" render="Label" position="1475,65" size="400,278" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+			<convert type="xtraInfo">Title,Year,Rated,Genre,Type,Country,Duration,SE</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1485,350" size="270,30" font="Regular; 24" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+			<convert type="xtraInfo">imdbRating</convert>
+		</widget>
+	</screen>
+
+	<screen name="ch">
+		<panel name="datetime" />
+		<eLabel name="" position="40,40" size="1180,900" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" />
+		<eLabel name="" position="1250,40" size="630,900" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" />
+		<eLabel name="" position="40,1006" size="1840,124" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" />
+		<widget source="Title" render="Label" position="50,3" size="734,30" font="Console; 26" foregroundColor="undddddd" backgroundColor="background" zPosition="99" transparent="1" />
+	</screen>
+	<screen name="ch_list">
+		<widget name="list" position="68,64" size="1120,850" backgroundColor="background" 
+		alphatest="blend" transparent="1" zPosition="1" itemHeight="50" 
+		cornerRadius="20" 
+		serviceItemHeight="50" serviceNumberFont="Regular;30" serviceNameFont="Regular;30" 
+		serviceInfoFont="Console2;20" foregroundColor="fc" foregroundColorSelected="fcs" 
+		colorServiceDescription="csd" colorServiceDescriptionSelected="csds" colorServiceRecording="red" 
+		foregroundColorServiceNotAvail="gr" colorEventProgressbar="b7" colorEventProgressbarSelected="b7" 
+		colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" 
+		scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarRadius="12" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black" 
+		fieldMargins="15" nonplayableMargins="15" itemsDistances="10" listMarginRight="20" 
+		progressBarWidth="90" progressbarHeight="10" 
+		progressPercentWidth="90" progressbarBorderWidth="1" />
+	</screen>
+</skin>

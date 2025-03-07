@@ -1,0 +1,11 @@
+Package: enigma2-plugin-skins-nacht
+Version: 7.0
+Section: skins
+Priority: optional
+Architecture: all
+Maintainer: digiteng
+Description: Nacht full hd skin by digiteng for openatv 7.x
+Depends: 
+Source: https://github.com/digiteng
+Homepage: https://www.opena.tv/skins/41929-nacht-neon-skin-digiteng-openatv.html
+OE: enigma2-skins

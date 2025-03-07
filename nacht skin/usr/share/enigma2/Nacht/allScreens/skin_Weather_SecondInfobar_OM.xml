@@ -1,0 +1,34 @@
+<skin>
+  <screen name="SecondInfoBar" position="0,0" size="1920,1080" title="Programm Info" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
+    <panel name="ch" />
+    <panel name="pig" />
+	<!-- <widget source="session.CurrentService" render="NachtCalendar" position="1300,500" size="500,500" zPosition="1" halign="left" noWrap="1" valign="center" backgroundColor="background" transparent="1" /> -->
+	<!-- WEATHER -->
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="current,temp,update" position="1285,420" size="600,160" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="current" position="1285,500" size="800,600" zPosition="1" backgroundColor="background" transparent="1" noWrap="1" />
+	
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="day1" position="112,75" size="500,440" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="day2" position="479,75" size="500,440" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="day3" position="851,75" size="500,440" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="day4" position="112,497" size="500,440" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="day5" position="479,497" size="500,440" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="day6" position="851,497" size="500,440" zPosition="1" backgroundColor="background" transparent="1" />
+	<widget source="session.CurrentService" render="NachtWeatherOM" mode="getUpdateInfo" position="120,945" size="1000,40" zPosition="1" backgroundColor="background" transparent="1" />
+
+	<!-- ... -->
+    <widget source="session.CurrentService" render="Label" position="70,1015" size="600,40" font="Regular; 30" backgroundColor="background" transparent="1" halign="left" noWrap="1" valign="center" zPosition="5">
+      <convert type="NachtServiceInfo">AVtype</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" backgroundColor="background" position="680,1015" size="500,40" transparent="1" zPosition="5" font="Regular; 30" halign="left" foregroundColor="b3">
+      <convert type="CryptoInfo">VerboseInfo</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1180,1015" size="55,55" pixmap="Nacht/nicons/lan.png" zPosition="4" alphatest="blend" transparent="1">
+      <convert type="NachtRouteInfo">Lan</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1180,1015" size="55,55" pixmap="Nacht/nicons/wifi2.png" zPosition="4" alphatest="blend" transparent="1">
+      <convert type="NachtRouteInfo">Wifi</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+  </screen>
+</skin>

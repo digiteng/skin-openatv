@@ -1,0 +1,86 @@
+<skin>
+  <screen name="vertical_EPG">
+    <panel name="rgyb_all" />
+    <!-- <panel name="datetime" /> -->
+    <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/e1/gepg.png" alphatest="off" transparent="1" />
+    <widget enableWrapAround="1" itemHeight="30" font="Regular;0" name="list" position="0,0" size="0,150" zPosition="-10" />
+    <widget source="piconCh1" render="Picon" position="188,90" size="75,45" zPosition="5" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="piconCh2" render="Picon" position="558,90" size="75,45" zPosition="5" alphatest="blend" transparent="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="piconCh3" render="MetrixHDXPicon" position="923,90" size="75,45" zPosition="5" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="piconCh4" render="Picon" position="1298,90" size="75,45" zPosition="5" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="piconCh5" render="Picon" position="1658,90" size="75,45" zPosition="5" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget font="Regular;33" halign="center" name="currCh1" foregroundColor="unc4c4c4" backgroundColor="green2" position="65,140" size="314,45" transparent="1" zPosition="5" />
+    <widget font="Regular;33" halign="center" name="currCh2" foregroundColor="unc4c4c4" backgroundColor="green2" position="436,140" size="314,45" transparent="1" zPosition="5" />
+    <widget font="Regular;33" halign="center" name="currCh3" foregroundColor="unc4c4c4" backgroundColor="green2" position="808,140" size="314,45" transparent="1" zPosition="5" />
+    <widget font="Regular;33" halign="center" name="currCh4" foregroundColor="unc4c4c4" backgroundColor="green2" position="1172,140" size="314,45" transparent="1" zPosition="5" />
+    <widget font="Regular;33" halign="center" name="currCh5" foregroundColor="unc4c4c4" backgroundColor="green2" position="1535,140" size="314,45" transparent="1" zPosition="5" />
+    <widget backgroundColor="green2" name="Active1" position="65,85" size="314,100" zPosition="2" transparent="0" />
+    <widget backgroundColor="green2" name="Active2" position="436,85" size="314,100" zPosition="1" />
+    <widget backgroundColor="green2" name="Active3" position="808,85" size="314,100" zPosition="1" />
+    <widget backgroundColor="green2" name="Active4" position="1172,85" size="314,100" zPosition="1" />
+    <widget backgroundColor="green2" name="Active5" position="1535,85" size="314,100" zPosition="1" />
+    <widget name="list1" position="65,200" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget name="list2" position="436,200" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget name="list3" position="808,200" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget name="list4" position="1172,200" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget name="list5" position="1535,200" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget source="Event" render="Label" font="Regular;27" position="63,790" size="1785,100" valign="top" transparent="1">
+      <convert type="EventName">FullDescription</convert>
+    </widget>
+  </screen>
+  <screen name="vertical_EPG_PIG">
+    <panel name="ch" />
+    <widget enableWrapAround="0" itemHeight="20" font="Regular;0" name="list" position="0,0" size="0,60" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="1297,72" size="550,285" backgroundColor="transparent" zPosition="1" />
+    <!--  -->
+    <widget source="piconCh1" render="Picon" position="213,90" size="75,45" zPosition="5" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="piconCh2" render="Picon" position="595,90" size="75,45" zPosition="5" alphatest="blend" transparent="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="piconCh3" render="MetrixHDXPicon" position="973,90" size="75,45" zPosition="5" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget font="Regular;33" halign="center" name="currCh1" foregroundColor="unc4c4c4" backgroundColor="green2" position="88,140" size="314,45" transparent="1" zPosition="5" />
+    <widget font="Regular;33" halign="center" name="currCh2" foregroundColor="unc4c4c4" backgroundColor="green2" position="472,142" size="314,45" transparent="1" zPosition="5" />
+    <widget font="Regular;33" halign="center" name="currCh3" foregroundColor="unc4c4c4" backgroundColor="green2" position="850,140" size="314,45" transparent="1" zPosition="5" />
+    <widget backgroundColor="green2" name="Active1" position="88,85" size="314,100" zPosition="2" transparent="0" />
+    <widget backgroundColor="green2" name="Active2" position="472,85" size="314,100" zPosition="1" />
+    <widget backgroundColor="green2" name="Active3" position="850,85" size="314,100" zPosition="1" />
+    <widget name="list1" position="88,205" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget name="list2" position="472,205" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <widget name="list3" position="850,205" scrollbarMode="showAlways" size="314,577" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="b8" scrollbarWidth="9" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="Nacht/e1/scrollbar.png" TimeForegroundColor="#00e3ffb8" TimeBackgroundColor="#00222222" PrimeTimeForegroundColor="#00FFFFCC" PrimeTimeBackgroundColor="#009F6000" EntryForegroundColor="#00CCFFFF" EntryBackgroundColor="#00212324" EntryForegroundColorSelected="#0000FFFF" EntryBackgroundColorSelected="#0005466D" EntryForegroundColorNow="#00CCFFCC" EntryBackgroundColorNow="#00333333" EntryForegroundColorNowSelected="#00FFFFFF" EntryBackgroundColorNowSelected="#0005466D" EntryForegroundColorPast="#00808080" EntryBackgroundColorPast="#ff000000" EntryForegroundColorPastSelected="#00FFFFFF" EntryBackgroundColorPastSelected="#0005466D" EntryBorderColor="#00999999" TimeFontVertical="Regular;30" EventFontVertical="Regular;24" transparent="1" />
+    <!--  -->
+    <widget source="session.Event_Now" render="Progress" position="88,804" size="1079,20" foregroundColor="blue" borderColor="blue" borderWidth="1" zPosition="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="88,837" size="1080,40" font="Console; 32" foregroundColor="g3" backgroundColor="tb" halign="center" valign="center" transparent="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="833,880" size="140,45" font="Regular;33" foregroundColor="una2fa84" backgroundColor="tb" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="90,880" size="550,40" font="Regular; 30" noWrap="1" foregroundColor="unffeb6b" backgroundColor="tb" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="988,880" size="179,40" font="Regular;33" halign="right" foregroundColor="un91ff00" backgroundColor="tb" transparent="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget source="Event" render="Label" font="Regular;27" position="1297,403" size="550,533" valign="top" transparent="1">
+      <convert type="EventName">FullDescription</convert>
+    </widget>
+  </screen>
+</skin>

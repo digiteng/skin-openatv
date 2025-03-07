@@ -1,0 +1,42 @@
+<skin>
+
+  <screen name="picon">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="118,762" size="300,169" zPosition="2" cornerRadius="20" />
+  </screen>
+  <screen name="picon3">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="120,500" size="300,169" zPosition="2" cornerRadius="20" />
+	<ePixmap position="120,500" size="300,169" zPosition="3" pixmap="Nacht/images/other/bacdrop_filter3.png" transparent="1" alphatest="blend" />
+  </screen>
+
+  <screen name="picon10">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="50,870" size="300,169" zPosition="3" alphatest="off" cornerRadius="20" />
+	<ePixmap position="12,830" size="382,250" zPosition="3" pixmap="Nacht/images/other/bacdrop_frame.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="picon8">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="100,860" size="300,169" zPosition="2" cornerRadius="20" />
+	<!-- <ePixmap position="100,860" size="300,169" zPosition="3" pixmap="Nacht/images/other/bacdrop_filter3.png" transparent="1" alphatest="blend" /> -->
+  </screen>
+  <screen name="picon_cp1">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="25,820" size="180,105" zPosition="2" cornerRadius="20" />
+  </screen>
+  <screen name="picon_cp2">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="25,789" size="220,132" zPosition="2" cornerRadius="20" />
+  </screen>
+
+  <screen name="picon_infbr1">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="100,860" size="220,132" zPosition="2" cornerRadius="20" />
+  </screen>
+  <screen name="picon_infbr7">
+	<widget source="session.Event_Now" render="xtraBackdrop" position="55,855" size="300,170" zPosition="2" cornerRadius="20" />
+  </screen>
+</skin>
+
+
+<!-- <skin> -->
+	<!-- <constant-widgets> -->
+		<!-- <constant-widget name="picon10"> -->
+			<!-- <widget source="session.Event_Now" render="xtraBackdrop" position="50,870" size="300,169" zPosition="3" alphatest="on" /> -->
+		<!-- </constant-widget> -->
+	<!-- </constant-widgets> -->
+
+<!-- </skin> -->

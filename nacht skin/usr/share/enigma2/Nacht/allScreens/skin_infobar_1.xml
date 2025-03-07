@@ -1,0 +1,52 @@
+<skin>
+<screen name="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" transparent="0">
+  <eLabel name="" position="61,829" size="1800, 198" transparent="0" zPosition="-1" backgroundColor="background" cornerRadius="20" />
+  <panel name="picon_infbr1" />
+  <panel name="weather-infobar" />
+  <panel name="infobar_Poster" />
+  <widget source="session.CurrentService" render="Label" position="380,827" size="1000,40" zPosition="1" font="Console; 30" backgroundColor="background" transparent="1">
+    <convert type="NachtServiceInfo">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" backgroundColor="background" font="Regular; 28" zPosition="2" halign="left" position="380,865" size="1000,36" render="Label" transparent="1" foregroundColor="uncccccc">
+    <convert type="NachtEventInfo">EventNameCompact</convert>
+  </widget>
+  <widget source="session.Event_Next" backgroundColor="background" font="Regular; 28" zPosition="2" halign="left" position="380,930" size="1000,36" render="Label" transparent="1" foregroundColor="uncccccc">
+    <convert type="NachtEventInfo">EventNameCompact</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="380,980" size="1000,36" font="Regular; 22" transparent="1" zPosition="2" foregroundColor="uncccccc" backgroundColor="background" halign="left" valign="center">
+    <convert type="NachtEventInfo2">SESSION_EPISODE,PARENTAL_RATING,GENRE,YEAR,DURATION</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" position="380,908" size="1000,15" foregroundColor="teal" backgroundColor="#005a5a63" zPosition="3" cornerRadius="20" transparent="0">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Progress" foregroundColor="teal" position="1415,908" size="180,15" backgroundColor="#005a5a63" zPosition="3" cornerRadius="20" transparent="0">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Progress" foregroundColor="teal" position="1630,908" size="180,15" backgroundColor="#005a5a63" zPosition="3" cornerRadius="20" transparent="0">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" foregroundColor="fc" position="1495,875" size="90,26" halign="left" backgroundColor="background" zPosition="3" transparent="1" font="Regular; 23">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" foregroundColor="fc" position="1730,875" size="90,26" halign="left" backgroundColor="background" zPosition="3" transparent="1" font="Regular; 23">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="FixedLabel" text="!" font="Console; 30" zPosition="11" position="1490,931" size="36,36" halign="center" backgroundColor="red" valign="center" transparent="0" foregroundColor="white">
+    <convert type="NachtSignal">BER</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel position="1415,875" size="98,26" text="SNR :" zPosition="2" font="Regular; 23" transparent="1" backgroundColor="background" />
+  <eLabel position="1635,875" size="113,26" text="AGC :" zPosition="2" font="Regular; 23" transparent="1" backgroundColor="background" />
+  <eLabel position="1415,940" size="113,26" text="BER : 0" zPosition="2" font="Regular; 23" transparent="1" backgroundColor="background" />
+  <widget source="session.RecordState" render="FixedLabel" text="REC" font="Console; 30" position="1719,65" zPosition="3" size="120,38" backgroundColor="red" halign="center" valign="center" foregroundColor="white">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1415,980" size="430,30" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+    <convert type="NachtServiceInfo">ServiceCompact</convert>
+  </widget>
+
+  <widget source="global.CurrentTime" render="Label" position="1423,840" size="400,25" font="Regular;22" halign="center" backgroundColor="background" foregroundColor="gr2" transparent="1">
+    <convert type="ClockToText">Format:%d.%m.%Y, %H:%M</convert>
+  </widget>
+</screen>
+</skin>   

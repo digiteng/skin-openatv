@@ -1,0 +1,37 @@
+<skin>
+	<screen name="weather-infobar">
+		<ePixmap name="" pixmap="Nacht/images/weather/weather_today_black.png" position="70,50" size="500,200" transparent="0" alphatest="off" zPosition="-1" />
+		<widget source="session.CurrentService" render="Label" position="125,60" size="500,30" zPosition="1" font="Regular; 26" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">current;update, %city</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="125,90" size="250,30" zPosition="1" font="Regular; 24" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">current;%desc</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="125,120" size="250,30" zPosition="1" font="Regular; 26" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">current;%wind</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="125,150" size="250,30" zPosition="1" font="Regular; 26" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">current;%date</convert>
+		</widget>
+		<widget source="session.CurrentService" render="NachtWeatherPixmap" path="/usr/share/enigma2/Nacht/WeatherIcons/" position="390,130" size="175,120" zPosition="2" transparent="1" alphatest="blend">
+			<convert type="NachtWeatherOMc">current;%icon</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="350,70" size="200,70" zPosition="1" font="meteo; 50" halign="right" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">current;%temp</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="125,180" size="250,30" zPosition="1" font="Regular; 26" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">day_0;%sunr</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="125,210" size="250,30" zPosition="1" font="Regular; 26" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">day_0;%suns</convert>
+		</widget>
+		<eLabel text="" font="meteo; 30" position="80, 65" size="30,30" halign="center" valign="center" transparent="1" foregroundColor="white" />
+		<eLabel text="" font="meteo; 30" position="80, 125" size="30,30" halign="center" valign="center" transparent="1" foregroundColor="white" />
+		<eLabel text="" font="meteo; 30" position="80, 155" size="30,30" halign="center" valign="center" transparent="1" foregroundColor="white" />
+		<eLabel text="" font="meteo; 30" position="80, 185" size="30,30" halign="center" valign="center" transparent="1" foregroundColor="white" />
+		<eLabel text="" font="meteo; 30" position="80, 215" size="30,30" halign="center" valign="center" transparent="1" foregroundColor="white" />
+	</screen>
+</skin>
+
+

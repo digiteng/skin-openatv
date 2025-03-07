@@ -1,0 +1,15 @@
+<skin>
+	<colors>
+		<color name="background" value="#50000000" />
+		<color name="black2" value="#50000000" />
+		<color name="tb" value="#50000000" />
+		<color name="csd" value="#006bffc6" />
+		<color name="csds" value="#0097ffd7" />
+	</colors>
+	<screen name="ch">
+		<panel name="datetime" />
+		<ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="Nacht/images/backgrounds/ch9.png" alphatest="off" transparent="0" />
+		<!-- <ePixmap position="1300,64" size="550,309" zPosition="2" pixmap="Nacht/images/other/tv_filtre.png" alphatest="blend" transparent="0" /> -->
+		<widget source="Title" render="Label" position="50,3" size="734,30" font="Console; 26" foregroundColor="undddddd" backgroundColor="background" zPosition="99" transparent="1" />
+	</screen>
+</skin>

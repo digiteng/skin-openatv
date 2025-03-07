@@ -1,0 +1,11 @@
+<skin>
+	<screen name="datetime">
+	  <widget source="global.CurrentTime" render="NachtClockPixmap" path="/usr/share/enigma2/Nacht/clockneons/clockneon4/" mode="Clock" position="1520,1017" size="160,52" zPosition="5" alphatest="blend" transparent="1" backgroundColor="black" />
+	  <widget source="global.CurrentTime" render="NachtClockPixmap" path="/usr/share/enigma2/Nacht/clockneons/green/" mode="DayMounth" position="1410,1030" size="80,26" halign="right" zPosition="5" alphatest="blend" transparent="1" backgroundColor="black" />
+	  <widget source="global.CurrentTime" render="NachtClockPixmap" path="/usr/share/enigma2/Nacht/clockneons/orange/" mode="Year" position="1710,1030" size="80,26" halign="left" zPosition="5" alphatest="blend" transparent="1" backgroundColor="black" />
+	</screen>
+		<widget source="global.CurrentTime" render="Pixmap" pixmap="/usr/share/enigma2/Nacht/clockneons/clockneon4/blink.png" position="1520,1017" size="160,52" alphatest="blend" transparent="1" zPosition="9">
+			<convert type="NachtAlwaysTrue" />
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+</skin>

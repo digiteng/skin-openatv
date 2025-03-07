@@ -1,0 +1,108 @@
+
+<skin>
+<screen name="MovieSelection" position="0,0" size="1920,1080" title="Movie Selection" flags="wfNoBorder" backgroundColor="transparent">
+	<!-- <eLabel name="" position="40,40" size="1180,900" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" /> -->
+	<!-- <eLabel name="" position="1250,40" size="630,900" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" /> -->
+	<!-- <eLabel name="" position="40,1006" size="1840,124" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" /> -->
+	<panel name="ch" />
+	<panel name="rgyb_all" />
+	<panel name="datetime" />
+	<!-- xtraEvent plugin -->
+	<widget source="Service" render="xtraEmcBackdrop" position="1313,80" size="500,300" zPosition="1" alphatest="off" cornerRadius="20" />
+	<widget source="Service" render="xtraEmcPoster" position="1710,515" size="185,278" zPosition="5" cornerRadius="20" />
+	<widget source="Service" render="xtraParental" position="1835,728" size="60,60" alphatest="blend" zPosition="2" transparent="1" />
+	<widget source="ServiceEvent" render="xtraStar2" position="1670,804" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+	<!-- <ePixmap pixmap="xtra/star_b.png" position="1710,804" size="200,20" alphatest="blend" zPosition="2" transparent="1" /> -->
+	<!-- <widget source="Service" render="Progress" pixmap="xtra/star.png" position="1710,804" size="200,20" alphatest="blend" transparent="1" zPosition="2" backgroundColor="background"> -->
+	  <!-- <convert type="xtraInfo">imdbRatingValue</convert> -->
+	<!-- </widget> -->
+	<widget source="Service" render="Label" position="1710,836" size="200,40" font="Regular; 30" halign="center" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+	  <convert type="xtraInfo">IMDB;Rating</convert>
+	</widget>
+	<!-- ... -->
+	<widget source="Service" render="Label" position="1290,855" size="255,40" font="Regular; 30" backgroundColor="background" halign="left" transparent="1" zPosition="1">
+	  <convert type="ServiceTime">StartTime</convert>
+	  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1290,895" size="400,40" font="Regular; 30" backgroundColor="background" halign="left" transparent="1" zPosition="1">
+	  <convert type="ServiceTime">StartTime</convert>
+	  <convert type="ClockToText">Format:%H:%M </convert>
+	</widget>
+	<widget source="Service" render="Label" position="1290,815" zPosition="1" size="254,40" font="Regular; 30" backgroundColor="background" halign="left" transparent="1">
+	  <convert type="ServiceTime">Duration</convert>
+	  <convert type="ClockToText">InMinutes</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1290,775" zPosition="1" size="308,40" font="Regular; 30" halign="left" backgroundColor="background" transparent="1">
+	  <convert type="MovieInfo">FileSize</convert>
+	</widget>
+	<widget font="Regular;34" halign="center" name="wait" position="65,80" zPosition="1" size="1130,700" valign="center" transparent="1" />
+	<widget name="list" position="65,80" size="1120,700" itemHeight="60" backgroundColor="background" foregroundColor="fc" enableWrapAround="1" transparent="1" CoolIconPos="15" CoolIconSize="40,40" CoolMoviePiconPos="170" CoolMoviePiconSize="720" CoolBarHPos="40" CoolBarPos="960" CoolBarSizeSa="160,15" CoolDateColor="1" CoolDateFont="Regular;24" CoolDateHPos="2" CoolDatePos="940" CoolDateWidth="200" CoolDirInfoWidth="170" CoolCSPos="750" CoolFolderSize="620" CoolFont="Regular;26" CoolHighlightColor="1" CoolMovieHPos="10" CoolMoviePos="170" CoolMovieSize="750" CoolPiconHPos="10" CoolPiconHeight="40" CoolPiconPos="60" CoolProgressPos="580" CoolSelNumTxtWidth="35" CoolSelectFont="Regular;25" CoolTitleColor="1" DefaultColor="foreground" />
+	<widget source="Service" render="Label" position="1290,465" size="660,40" font="Regular; 30" backgroundColor="background" valign="center" halign="left" transparent="1" foregroundColor="fc">
+	  <convert type="EMCEventName">Name</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1290,425" size="660,40" font="Regular; 30" halign="left" backgroundColor="background" transparent="1">
+	  <convert type="EMCMovieInfo">RecordServiceName</convert>
+	</widget>
+	<widget source="Service" render="NachtRunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="62,808" size="1130,120" font="Regular; 26" backgroundColor="background" transparent="1" halign="left" valign="top" foregroundColor="g3">
+	  <convert type="EventName">Description</convert>
+	</widget>
+	<widget source="Service" render="Picon" position="1290,579" zPosition="2" size="220,132" transparent="1" alphatest="blend">
+	  <convert type="MovieReference" />
+	</widget>
+
+  </screen>
+<screen name="EMCSelection" position="0,0" size="1920,1080" title="EMC Selection" flags="wfNoBorder" backgroundColor="transparent">
+	<!-- <eLabel name="" position="40,40" size="1180,900" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" /> -->
+	<!-- <eLabel name="" position="1250,40" size="630,900" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" /> -->
+	<!-- <eLabel name="" position="40,1006" size="1840,124" backgroundColor="#40000000" zPosition="-10" transparent="0" cornerRadius="20" /> -->
+	<panel name="ch" />
+	<panel name="rgyb_all" />
+	<panel name="datetime" />
+	<!-- xtraEvent plugin -->
+	<widget source="Service" render="xtraEmcBackdrop" position="1313,80" size="500,300" zPosition="1" alphatest="off" cornerRadius="20" />
+	<widget source="Service" render="xtraEmcPoster" position="1675,515" size="185,278" zPosition="1" cornerRadius="20" />
+	<widget source="Service" render="xtraParental" position="1685,728" size="60,60" alphatest="blend" zPosition="2" transparent="1" />
+	<widget source="ServiceEvent" render="xtraStar2" position="1670,804" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+	<!-- <ePixmap pixmap="xtra/star_b.png" position="1710,804" size="200,20" alphatest="blend" zPosition="2" transparent="1" /> -->
+	<!-- <widget source="Service" render="Progress" pixmap="xtra/star.png" position="1710,804" size="200,20" alphatest="blend" transparent="1" zPosition="2" backgroundColor="background"> -->
+	  <!-- <convert type="xtraInfo">imdbRatingValue</convert> -->
+	<!-- </widget> -->
+	<widget source="Service" render="Label" position="1670,836" size="200,40" font="Regular; 18" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+	  <convert type="xtraInfo">IMDB;Rating</convert>
+	</widget>
+	<!-- ... -->
+	<widget source="Service" render="Label" position="1270,855" size="255,40" font="Regular; 30" backgroundColor="background" halign="left" transparent="1" zPosition="1">
+	  <convert type="ServiceTime">StartTime</convert>
+	  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1270,895" size="400,40" font="Regular; 30" backgroundColor="background" halign="left" transparent="1" zPosition="1">
+	  <convert type="ServiceTime">StartTime</convert>
+	  <convert type="ClockToText">Format:%H:%M </convert>
+	</widget>
+	<widget source="Service" render="Label" position="1270,815" zPosition="1" size="254,40" font="Regular; 30" backgroundColor="background" halign="left" transparent="1">
+	  <convert type="ServiceTime">Duration</convert>
+	  <convert type="ClockToText">InMinutes</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1270,775" zPosition="1" size="308,40" font="Regular; 30" halign="left" backgroundColor="background" transparent="1">
+	  <convert type="MovieInfo">FileSize</convert>
+	</widget>
+	<widget font="Regular;34" halign="center" name="wait" position="65,80" zPosition="1" size="1130,700" valign="center" transparent="1" />
+	<widget name="list" position="65,80" size="1120,700" itemHeight="60" backgroundColor="background" foregroundColor="fc" enableWrapAround="1" transparent="1" CoolIconPos="15" CoolIconSize="40,40" CoolMoviePiconPos="170" CoolMoviePiconSize="720" CoolBarHPos="40" CoolBarPos="960" CoolBarSizeSa="160,15" CoolDateColor="1" CoolDateFont="Regular;24" CoolDateHPos="2" CoolDatePos="940" CoolDateWidth="200" CoolDirInfoWidth="170" CoolCSPos="750" CoolFolderSize="620" CoolFont="Regular;26" CoolHighlightColor="1" CoolMovieHPos="10" CoolMoviePos="170" CoolMovieSize="750" CoolPiconHPos="10" CoolPiconHeight="40" CoolPiconPos="60" CoolProgressPos="580" CoolSelNumTxtWidth="35" CoolSelectFont="Regular;25" CoolTitleColor="1" DefaultColor="foreground" />
+	<widget source="Service" render="Label" position="1270,475" size="660,40" font="Regular; 26" backgroundColor="background" valign="center" halign="left" transparent="1" foregroundColor="fc">
+	  <convert type="EMCEventName">Name</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1270,430" size="660,40" font="Regular; 26" halign="left" backgroundColor="background" transparent="1">
+	  <convert type="EMCMovieInfo">RecordServiceName</convert>
+	</widget>
+	<widget source="Service" render="NachtRunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="62,808" size="1130,120" font="Regular; 26" backgroundColor="background" transparent="1" halign="left" valign="top" foregroundColor="g3">
+	  <convert type="EventName">Description</convert>
+	</widget>
+	<widget source="Service" render="Picon" position="1270,579" zPosition="2" size="220,132" transparent="1" alphatest="blend">
+	  <convert type="MovieReference" />
+	</widget>
+	<!-- <widget source="global.CurrentTime" render="Label" position="1297,995" size="550,40" font="Console; 30" valign="center" halign="center" transparent="1" foregroundColor="lightgrey3"> -->
+	  <!-- <convert type="ClockToText">Format:%a, %e. %B %Y	 %H:%M</convert> -->
+	<!-- </widget> -->
+  </screen>
+
+</skin>

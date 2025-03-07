@@ -1,0 +1,15 @@
+<skin>
+  <screen name="weather-infobar">
+		<widget source="session.CurrentService" render="Label" position="60,140" size="450,22" zPosition="1" font="Regular; 20" shadowColor="shadow" shadowOffset="3,3" noWrap="1" halign="left" transparent="1" backgroundColor="#206C9D" foregroundColor="fc">
+			<convert type="NachtWeatherOMc">current,update;%city • %desc • %sday • %wind</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="60,60" size="200,80" zPosition="1" font="meteo; 70" shadowColor="shadow" shadowOffset="3,3" halign="left" transparent="1" backgroundColor="#206C9D" foregroundColor="white">
+			<convert type="NachtWeatherOMc">current;%temp</convert>
+		</widget>
+		<widget source="session.CurrentService" render="NachtWeatherPixmap" path="/usr/share/enigma2/Nacht/images/weather/w2/" position="40,40" size="500,135" zPosition="-1" transparent="1" backgroundColor="#206C9D">
+			<convert type="NachtWeatherOMc">current;backpic</convert>
+		</widget>
+  </screen>
+</skin>
+

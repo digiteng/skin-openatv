@@ -1,0 +1,26 @@
+<skin>
+	<screen name="channelselection">
+		<panel name="ch" />
+		<panel name="ch_list" />
+		<panel name="rgyb_all" />
+		<panel name="pig" />
+
+		<widget source="ServiceEvent" render="Label" position="1265,390" size="600,50" font="Regular; 32" zPosition="5" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="p6" backgroundColor="background">
+			<convert type="NachtServiceName2">Provider</convert>
+		</widget>
+		<widget source="ServiceEvent" render="NachtRunningText" options="movetype=swimming,startpoint=0,direction=left,steptime=70,repeat=2,always=0,oneshot=0,startdelay=3000" position="1265,488" size="600,40" transparent="1" foregroundColor="white" noWrap="1" backgroundColor="background" font="Console; 30" halign="left">
+			<convert type="EventName">Name</convert>
+		</widget> 
+
+		<widget render="NachtEvents" source="ServiceEvent" eventNumber="5" position="1265,580" size="600,170" font="Regular; 26" noWrap="1" zPosition="2" transparent="1" />
+		<widget render="NachtPrimeTime" source="ServiceEvent" position="1265,807" size="600,40" font="Regular; 26" noWrap="1" zPosition="2" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="1265,900" size="600,30" font="Regular; 26" backgroundColor="background" transparent="1" halign="left" noWrap="1" valign="center" text="19.2E	 DVB-S2	 10627 27500 3/4 8PSK" zPosition="3" foregroundColor="white">
+			<convert type="NachtServiceName2">%O - %F %p %Y - %s</convert>
+		</widget>
+		<ePixmap name="" pixmap="Nacht/nicons/now.png" position="1260,439" size="200,50" transparent="1" alphatest="blend" zPosition="5" />
+		<ePixmap name="" pixmap="Nacht/nicons/next.png" position="1260,535" size="200,50" transparent="1" alphatest="blend" zPosition="5" />
+		<ePixmap name="" pixmap="Nacht/nicons/prime.png" position="1260,762" size="250,50" transparent="1" alphatest="blend" zPosition="5" />
+		<ePixmap name="" pixmap="Nacht/nicons/chinfo.png" position="1260,855" size="200,50" transparent="1" alphatest="blend" zPosition="5" />
+
+	</screen>
+</skin>			

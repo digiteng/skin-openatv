@@ -1,0 +1,625 @@
+<skin>
+	<!-- <constant-widgets> -->
+		<!-- <constant-widget name="picon10"> -->
+			<!-- <widget source="session.Event_Now" render="xtraBackdrop" position="50,870" size="300,169" zPosition="2" /> -->
+			<!-- <ePixmap position="50,870" size="300,169" zPosition="3" pixmap="Nacht/images/other/bacdrop_filter3.png" transparent="1" alphatest="blend" /> -->
+		<!-- </constant-widget> -->
+	<!-- </constant-widgets> -->
+  <!--PANELS-->
+  <screen name="ch">
+	<ePixmap position="0,0" size="1920,1080" zPosition="-55" pixmap="Nacht/images/backgrounds/ch.png" />
+	<widget source="Title" render="Label" position="70,3" size="1100,30" font="Console; 24" foregroundColor="#bbbbbb" backgroundColor="background" zPosition="99" transparent="1" />
+	<panel name="datetime" />
+  </screen>
+  <screen name="pig">
+	<widget source="session.VideoPicture" render="Pig" position="1300,64" size="550,309" zPosition="1" backgroundColor="transparent" />
+  </screen>
+  <screen name="picon">
+	<widget source="session.CurrentService" render="Picon" position="158,785" size="220,132" zPosition="4" transparent="1" alphatest="blend" cornerRadius="20" >
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+  </screen> 
+  <screen name="picon3">
+	<widget source="session.CurrentService" render="Picon" position="165,510" zPosition="2" size="220,132" transparent="1" alphatest="blend" cornerRadius="20" >
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+  </screen>
+  <screen name="picon8">
+	<widget source="session.CurrentService" render="Picon" position="142,879" zPosition="2" size="220,132" transparent="1" alphatest="blend" cornerRadius="20" >
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+  </screen>
+  <screen name="picon9">
+	<widget source="session.CurrentService" render="Picon" position="96,873" zPosition="2" size="220,132" transparent="1" alphatest="blend" cornerRadius="20" >
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+  </screen>
+  <screen name="picon10">
+	<widget source="session.CurrentService" render="Picon" position="90,890" zPosition="2" size="220,132" transparent="1" alphatest="blend" cornerRadius="20" >
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+  </screen>
+  <screen name="picon_cp1">
+	  <widget source="session.CurrentService" render="Picon" position="25,820" zPosition="1" size="180,105" transparent="1" alphatest="blend" cornerRadius="20"  borderWidth="1" borderColor="b8">
+		<convert type="ServiceName">Reference</convert>
+	  </widget>
+  </screen>
+  <screen name="picon_cp2">
+	<widget source="session.CurrentService" render="Picon" position="25,789" zPosition="1" size="220,132" transparent="1" alphatest="blend" cornerRadius="20" >
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+  </screen>
+  <screen name="picon_infbr1">
+	  <widget source="session.CurrentService" render="Picon" position="100,860" size="220,132"	zPosition="2" transparent="1" alphatest="blend" cornerRadius="20" >
+		<convert type="ServiceName">Reference</convert>
+	  </widget>
+  </screen>
+  <screen name="picon_infbr7">
+	  <widget source="session.CurrentService" render="Picon" position="96,873" size="220,132"	zPosition="2" transparent="1" alphatest="blend" cornerRadius="20" >
+		<convert type="ServiceName">Reference</convert>
+	  </widget>
+  </screen>
+  <!--/* NEW-Automatic-BUTTONS /> -->
+  <screen name="rgyb_red">
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_red.png" position="45,1010" size="70,70" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+	<widget source="key_red" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb3_red.png" position="45,1010" size="70,70" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget name="key_red" position="117,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_red,Button,Label" transparent="1" />
+	<widget source="key_red" render="Label" position="117,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_red,StaticText" transparent="1" />
+	<!-- <widget name="red" position="117,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_red,Button,Label" transparent="1" /> -->
+  </screen>
+  <screen name="rgyb_green">
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_green.png" position="350,1010" size="70,70" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+	<widget source="key_green" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb3_green.png" position="350,1010" size="70,70" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget name="key_green" position="420,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_green,Button,Label" transparent="1" />
+	<widget source="key_green" render="Label" position="420,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_green,StaticText" transparent="1" />
+	<!-- <widget name="green" position="420,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_green,Button,Label" transparent="1" /> -->
+  </screen>
+  <screen name="rgyb_yellow">
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_yellow.png" position="655,1010" size="70,70" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+	<widget source="key_yellow" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb3_yellow.png" position="655,1010" size="70,70" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget name="key_yellow" position="725,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_yellow,Button,Label" transparent="1" />
+	<widget source="key_yellow" render="Label" position="725,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_yellow,StaticText" transparent="1" />
+	<!-- <widget name="yellow" position="725,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_yellow,Button,Label" transparent="1" /> -->
+  </screen>
+  <screen name="rgyb_blue">
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_blue.png" position="960,1012" size="70,70" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+	<widget source="key_blue" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb3_blue.png" position="960,1010" size="70,70" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget name="key_blue" position="1030,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_blue,Button,Label" transparent="1" />
+	<widget source="key_blue" render="Label" position="1030,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_blue,StaticText" transparent="1" />
+	<!-- <widget name="blue" position="1030,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_blue,Button,Label" transparent="1" /> -->
+  </screen>
+  <screen name="rgyb_menu">
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_red.png" position="45,1010" size="70,70" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_green.png" position="350,1010" size="70,70" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_yellow.png" position="655,1010" size="70,70" alphatest="blend" transparent="1" />
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_blue.png" position="960,1012" size="70,70" alphatest="blend" transparent="1" />
+	<widget name="red" render="Label" position="115,1010" size="235,70" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+	<widget name="green" render="Label" position="420,1010" size="235,70" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+	<widget name="yellow" render="Label" position="725,1010" size="235,70" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+	<widget name="blue" render="Label" position="1030,1010" size="235,70" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+  </screen>
+  <screen name="rgyb_all">
+	<panel name="rgyb_red" />
+	<panel name="rgyb_green" />
+	<panel name="rgyb_yellow" />
+	<panel name="rgyb_blue" />
+  </screen>
+	<screen name="ch_list">
+		<widget name="list" position="68,64" size="1120,850" backgroundColor="background" 
+		alphatest="blend" transparent="1" zPosition="1" itemHeight="50" 
+		cornerRadius="10" itemCornerRadius="10" itemCornerRadiusSelected="10" 
+		serviceItemHeight="50" serviceNumberFont="Regular;30" serviceNameFont="Regular;30" 
+		serviceInfoFont="Console2;20" foregroundColor="fc" foregroundColorSelected="fcs" 
+		colorServiceDescription="csd" colorServiceDescriptionSelected="csds" colorServiceRecording="red" 
+		foregroundColorServiceNotAvail="gr" colorEventProgressbar="b7" colorEventProgressbarSelected="b7" 
+		colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" 
+		scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarRadius="5" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black" 
+		fieldMargins="15" nonplayableMargins="15" itemsDistances="15" 
+		progressBarWidth="90"	
+		progressbarHeight="10" progressPercentWidth="90" progressbarBorderWidth="1" />
+	</screen>
+  <screen name="datetime">
+	<widget source="global.CurrentTime" render="Label" position="1295,1025" size="600,40" font="Console; 30" valign="center" halign="center" transparent="1" foregroundColor="lightgrey3">
+	  <convert type="ClockToText">Format:%a, %e. %B %Y \c00??????%H:%M</convert>
+	</widget>
+  </screen>
+  <screen name="datetime_infobar">
+	<!--datetime-->
+	<widget render="NachtClockPixmap" source="global.CurrentTime" path="/usr/share/enigma2/Nacht/clockneons/clockneon1/" position="1710,920" size="128,42" zPosition="5" backgroundColor="transparent" alphatest="blend" transparent="1" />
+	<!-- <widget source="global.CurrentTime" render="Pixmap" pixmap="/usr/share/enigma2/Nacht/clockneons/clockneon1/blink.png" position="1710,920" size="128,42" alphatest="blend" transparent="1" zPosition="6"> -->
+	  <!-- <convert type="NachtAlwaysTrue" /> -->
+	  <!-- <convert type="ConditionalShowHide">Blink</convert> -->
+	<!-- </widget> -->
+  </screen>
+<!-- crypt -->
+<screen name="cryp2">
+	<ePixmap name="" pixmap="Nacht/nicons/cryp.png" position="620,997" size="800,37" zPosition="0" transparent="0" alphatest="blend" />
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Biss_c.png" position="620,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">BisCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Biss.png" position="620,997" size="50,37" zPosition="3" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">BisEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Conax_c.png" position="670,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ConaxCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Conax.png" position="670,997" size="50,37" zPosition="3" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ConaxEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Seca_c.png" position="720,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">SecaCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Seca.png" position="720,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">SecaEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Nagravision_c.png" position="770,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">NagraCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Nagravision.png" position="770,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">NagraEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Cryptoworks_c.png" position="820,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">CrwCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Cryptoworks.png" position="820,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">CrwEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Viacces_c.png" position="870,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ViaCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Viacces.png" position="870,997" size="50,37" zPosition="3" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ViaEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Irdeto_c.png" position="920,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">IrdCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Irdeto.png" position="920,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">IrdEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/PowerVu_c.png" position="970,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">PowerVuCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/PowerVu.png" position="970,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">PowerVuEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Tandberg_c.png" position="1020,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">TandbergCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/Tandberg.png" position="1020,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">TandbergEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/NDS-Videoguard_c.png" position="1070,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">NdsCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/NDS-Videoguard.png" position="1070,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">NdsEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/BetaCrypt_c.png" position="1120,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">BetaCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/BetaCrypt.png" position="1120,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">BetaEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>	
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/DRE_c.png" position="1170,997" size="50,37" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">DreamCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/DRE.png" position="1170,997" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">DreamEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>	
+</screen>
+  <screen name="foot">
+	<widget name="footnote" position="60,940" size="1140,50" zPosition="1" font="Regular; 22" halign="left" transparent="1" valign="top" foregroundColor="g3" />
+	<widget name="description" position="1262,577" size="600,300" font="Regular; 30" halign="center" valign="top" transparent="1" zPosition="1" foregroundColor="lightgrey" backgroundColor="background" />
+  </screen>
+  <screen name="clk">
+	<widget source="global.CurrentTime" render="Label" position="1664,963" size="192,64" font="LCD;40" valign="center" halign="center" backgroundColor="background" transparent="1" foregroundColor="b8">
+	  <convert type="ClockToText">Format:%H:%M</convert>
+	</widget>
+  </screen>
+  <screen name="mn2">
+	<ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/images/backgrounds/gepg.png" alphatest="off" transparent="1" />
+  </screen>
+  <screen name="q3">
+	<ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/images/backgrounds/q3.png" alphatest="off" transparent="1" />
+  </screen>
+  <screen name="cvr">
+	<ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/images/backgrounds/ch2.png" alphatest="off" transparent="1" />
+  </screen>
+  <screen name="inf">
+	<widget source="Event" position="1285,440" size="600,460" render="NachtRunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" transparent="1" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="lightgrey" zPosition="5">
+	  <convert type="EventName">FullDescription</convert>
+	</widget>
+  </screen>
+  <screen name="cnfg">
+	<widget name="config" itemHeight="50" position="68,64" size="1120,850" zPosition="5" transparent="1" font="Console; 30" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarRadius="5" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black" />
+  </screen>
+  <screen name="intr">
+	<widget name="introduction" position="60,940" zPosition="1" size="1140,84" font="Regular;22" foregroundColor="g3" backgroundColor="background" transparent="1" />
+  </screen>
+  <screen name="list">
+	<widget name="list" itemHeight="50" position="68,64" size="1120,850" zPosition="5" transparent="1" font="Regular; 30" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarRadius="5" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black" />
+  </screen>
+	<screen name="disk_info">
+		<ePixmap position="100,470" size="1016,33" pixmap="/usr/share/enigma2/Nacht/images/progress/prgrs_7a_back.png" alphatest="blend" transparent="1" zPosition="3" />
+		<widget source="global.CurrentTime" render="Progress" position="112,480" size="1000,12" foregroundColor="#00baff" cornerRadius="15" backgroundColor="background" transparent="1" zPosition="2">
+			<convert type="NachtDiskInfos">ram_info_progress</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="100,505" size="1000,40" font="Console; 30" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1">
+			<convert type="NachtDiskInfos">ram_info</convert>
+		</widget>
+		<ePixmap position="100,570" size="1016,33" pixmap="Nacht/images/progress/prgrs_7a_back.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="global.CurrentTime" render="Progress" position="112,580" size="1000,12" foregroundColor="#00baff" cornerRadius="15" backgroundColor="background" transparent="1" zPosition="2">
+			<convert type="NachtDiskInfos">swap_info_progress</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="100,605" size="1000,40" font="Console; 30" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1">
+			<convert type="NachtDiskInfos">swap_info</convert>
+		</widget>
+		<ePixmap position="100,670" size="1016,33" pixmap="Nacht/images/progress/prgrs_7a_back.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="global.CurrentTime" render="Progress" position="112,680" size="1000,12" foregroundColor="#00baff" cornerRadius="15" backgroundColor="background" transparent="1" zPosition="2">
+			<convert type="NachtDiskInfos">flash_info_progress</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="100,705" size="1000,40" font="Console; 30" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1">
+			<convert type="NachtDiskInfos">flash_info</convert>
+		</widget>
+		<ePixmap position="100,770" size="1016,33" pixmap="Nacht/images/progress/prgrs_7a_back.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="global.CurrentTime" render="Progress" position="112,780" size="1000,12" foregroundColor="#00baff" cornerRadius="15" transparent="1" backgroundColor="background" zPosition="2">
+			<convert type="NachtDiskInfos">disk_info_progress</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="100,805" size="1000,40" font="Console; 30" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1">
+			<convert type="NachtDiskInfos">disk_info</convert>
+		</widget>
+	</screen>
+  <screen name="msg">
+	<widget backgroundColor="background" font="Regular; 25" name="text" position="512,368" size="837,98" transparent="1" zPosition="2" />
+	<widget alphatest="blend" name="ErrorPixmap" pixmap="icons/input_error.png" position="434,387" size="60,60" />
+	<widget alphatest="blend" name="QuestionPixmap" pixmap="icons/input_question.png" position="434,388" size="60,60" />
+	<widget alphatest="blend" name="InfoPixmap" pixmap="icons/input_info.png" position="436,387" size="60,60" />
+	<widget backgroundColor="background"  itemHeight="45" font="Regular;32" name="list" position="444,492" size="900,200" transparent="1" zPosition="2" />
+	<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 120, textsize[1] + 120)
+offset = 45
+if self.type == self.TYPE_YESNO:
+	offset = 105
+wsizex = textsize[0] + 180
+wsizey = textsize[1] + offset
+if (1200 &gt; wsizex):
+	wsizex = 1200
+wsize = (wsizex, wsizey)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+self["text"].instance.resize(eSize(*textsize))
+# move list
+listsize = (wsizex - 30, 96)
+self["list"].instance.move(ePoint(15, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
+		</applet>
+  </screen>
+  <screen name="msgbx">
+	<widget source="Title" render="Label" position="109,28" size="1080,60" font="Regular; 50" halign="left" valign="center" foregroundColor="white" backgroundColor="background" borderColor="blue" borderWidth="1" transparent="1" zPosition="1" />
+	<widget name="text" position="10,97" size="1180,60" font="Regular; 40" valign="center" halign="center" foregroundColor="white" backgroundColor="background" />
+	<widget name="ErrorPixmap" pixmap="Nacht/skin_default/icons/input_error.png" position="8,8" size="80,80" alphatest="blend" />
+	<widget name="QuestionPixmap" pixmap="Nacht/skin_default/icons/input_question.png" position="8,8" size="80,80" alphatest="blend" />
+	<widget name="InfoPixmap" pixmap="Nacht/skin_default/icons/input_info.png" position="8,8" size="80,80" alphatest="blend" />
+	<widget name="list" position="14,163" size="1180,330" itemHeight="50" font="Regular; 36" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444"  foregroundColor="white" backgroundColor="background"	 transparent="1" />
+	<applet type="onLayoutFinish">
+# this should be factored out into some helper code,but currently demonstrates applets.
+from enigma import eSize,ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 15
+offset_listposy = 135
+offset_listwidth = 15
+offset_listheight = 50
+offset_textwidth = 255
+offset_textheight = 36
+min_width = 600
+min_height = 75
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+listwidth = 0
+listheight = 0
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) &gt; listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+if (min_height &gt; textheight):
+	textheight = min_height
+if (min_width &gt; textwidth):
+	textwidth = min_width
+if (listheight &gt; 0):
+	offset = 38
+else:
+	offset = 20
+if (textwidth &gt; listwidth):
+	wsizex = textwidth + offset_listposx * 2
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+wsizey = textheight + listheight + offset
+if ((wsizey + offset_listposy - offset_listposx) &gt; deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+if (wsizex &gt; deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+# move list
+listsize = (wsizex - offset_listposx * 2,listheight)
+self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+self["list"].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight)/2))
+		</applet>
+  </screen>
+  <!-- <screen name="mtrx"> -->
+	<!-- <widget source="titleText" render="Label" position="68,64" size="1100,40" font="Console2; 30" halign="center" valign="top" foregroundColor="b8" backgroundColor="background" transparent="1" zPosition="1" /> -->
+	<!-- <widget source="cancelBtn" render="Label" position="110,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget source="deleteBtn" render="Label" position="110,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget source="checkBtn" render="Label" position="385,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget source="applyBtn" render="Label" position="385,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget source="loadBtn" render="Label" position="650,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget source="saveBtn" render="Label" position="650,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget source="testBtn" render="Label" position="935,975" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="background" transparent="0" /> -->
+	<!-- <widget name="resulttext" position="1269,800" size="600,217" font="Regular;36" backgroundColor="background" foregroundColor="white" halign="center" transparent="1" /> -->
+	<!-- <widget name="helpertext" position="1269,800" size="600,217" font="Regular; 36" foregroundColor="uncccccc" halign="center" backgroundColor="background" valign="center" transparent="1" /> -->
+	<!-- <widget name="HelpWindow" position="1269,800" size="600,217" zPosition="1" transparent="1" alphatest="blend" /> -->
+	<!-- <widget name="helperimage" position="1269,498" size="600,300" backgroundColor="background" zPosition="8" transparent="1" alphatest="blend" /> -->
+  <!-- </screen> -->
+	<screen name="wizard">
+	<widget name="text" position="150,140" size="1100,250" font="Regular;30" foregroundColor="lightgrey" backgroundColor="background" transparent="1"/>
+	<widget source="list" render="Listbox" position="150,400" size="1100,440" transparent="1" font="Regular;30" itemHeight="40" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444">
+		<convert type="StringList"/>
+	</widget>
+	<widget name="config" position="150,400" size="1100,440" transparent="1" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444"/>
+	<widget name="languagetext" position="118,950" size="222,80" zPosition="1" font="Regular;30" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="white" backgroundColor="background"/>
+  </screen>
+  <screen name="wizardremote">
+	<widget name="rc" position="1325,422" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+	<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+	<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+	<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+	<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+  </screen>
+<screen name="crypt">
+	<ePixmap name="" pixmap="Nacht/nicons/c0/cryp.png" position="635,993" size="490,50" transparent="0" alphatest="blend" />
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ex2.png" position="636,993" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" alphatest="blend" zPosition="2" valign="center" transparent="1">
+	  <convert type="NachtCaidInfo2">ExsCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ex.png" position="636,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" valign="center" transparent="1">
+	  <convert type="NachtCaidInfo2">ExsEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/be2.png" position="686,993" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">BetaCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/be.png" position="686,993" size="40,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" valign="center" transparent="1">
+	  <convert type="NachtCaidInfo2">BetaEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/dr2.png" position="731,993" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">DreamCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/dr.png" position="731,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">DreamEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ird2.png" position="781,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">IrdCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ird.png" position="781,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">IrdEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/seca2.png" position="801,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">SecaCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/seca.png" position="801,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" valign="center" transparent="1">
+	  <convert type="NachtCaidInfo2">SecaEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/v2.png" position="828,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ViaCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/v.png" position="828,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" zPosition="3" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ViaEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/n2.png" position="860,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">NagraCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/n.png" position="860,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">NagraEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/cw2.png" position="891,993" size="45,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">CrwCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/cw.png" position="891,993" size="55,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">CrwEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/nd2.png" position="946,993" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">NdsCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/nd.png" position="946,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">NdsEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/co2.png" position="997,993" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ConaxCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/co.png" position="997,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" zPosition="3" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">ConaxEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/biss2.png" position="1038,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">BisCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/biss.png" position="1038,993" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" zPosition="3" alphatest="blend" transparent="1">
+	  <convert type="NachtCaidInfo2">BisEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/pw.png" position="1064,993" zPosition="2" size="55,50" alphatest="blend" backgroundColor="tb" transparent="1">
+	  <convert type="NachtCaidInfo2">PowerVuEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/pw.png" pposition="1064,993" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">PowerVuEcm</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/pw2.png" position="1064,993" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+	  <convert type="NachtCaidInfo2">PowerVuCrypt</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
+  </screen>
+	<screen name="MessageBox-panel">
+		<!-- new version 4 /-->
+		<widget source="Title" render="Label" position="72,8" foregroundColor="foreground" size="618,50" noWrap="1" valign="bottom" font="Regular;34" backgroundColor="background" transparent="1"/>
+		<!-- <panel name="ul-messagebox" /> -->
+		<!-- icons TYPE_YESNO, TYPE_INFO, TYPE_WARNING, TYPE_ERROR, TYPE_MESSAGE -->
+		<widget name="icon" position="8,8" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="text" position="10,80" size="780,50" font="Regular;22" valign="center" halign="center" backgroundColor="#000000" foregroundColor="foreground" />
+		<widget name="list" position="10,140" size="780,240" padding="10,0" itemHeight="30" font="Regular;24" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="foreground" transparent="1" cornerRadius="20" />
+		<applet type="onLayoutFinish">
+# this should be factored out into some helper code,but currently demonstrates applets.
+from __future__ import division
+from enigma import eSize, ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 10
+offset_listposy = 90
+offset_listwidth = 10
+offset_listheight = 30
+offset_textwidth = 170
+offset_textheight = 20
+min_width = 400
+min_height = 50
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+listwidth = 0
+listheight = 0
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) > listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+maxheight = int(deskheight * 0.75)
+if listheight &gt;maxheight:
+	listheight = maxheight
+if (min_height &gt;textheight):
+	textheight = min_height
+if (min_width &gt;textwidth):
+	textwidth = min_width
+if (listheight &gt;0):
+	offset = 21
+else:
+	offset = 13
+if (textwidth &gt;listwidth):
+	wsizex = textwidth + offset_listposx * 2
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+wsizey = textheight + listheight + offset
+if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+if (wsizex &gt;deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+# move list
+if self.list:
+	listsize = (wsizex - offset_listposx * 2,listheight)
+	self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+	self["list"].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
+		</applet>
+	</screen>
+</skin>	 

@@ -1,0 +1,6 @@
+<skin>
+  <screen name="Volume" position="50,50" size="527,69" title="Volume" backgroundColor="transparent" zPosition="6" flags="wfNoBorder" transparent="0">
+    <widget render="NachtVolPxmp" source="global.CurrentTime" path="/usr/share/enigma2/Nacht/volume/val.png" position="20,21" size="445,31" zPosition="8" alphatest="blend" transparent="1" />
+    <ePixmap name="" pixmap="Nacht/volume/volbar.png" alphatest="on" zPosition="7" position="0,0" size="527,69" transparent="1" />
+  </screen>
+</skin>  

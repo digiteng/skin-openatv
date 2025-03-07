@@ -1,0 +1,14 @@
+  
+<skin>
+	<screen name="Volume" position="50,50" size="300,160" title="Volume" zPosition="55" backgroundColor="#ff000000" flags="wfNoBorder">
+		<ePixmap name="" position="0,0" size="300,160" pixmap="Nacht/volume/vol_back4.png" alphatest="blend" zPosition="0" />
+		<ePixmap name="" position="11,3" size="150,138" pixmap="Nacht/volume/val4a.png" alphatest="blend" zPosition="2" />
+		<ePixmap name="" position="0,0" size="300,160" pixmap="Nacht/volume/vol_button4.png" alphatest="blend" zPosition="5" />
+		<widget render="NachtPrgrsVol" source="global.CurrentTime" position="11,3" size="150,138" backgroundColor="#000000" zPosition="3" alphatest="blend" transparent="1" />
+		<widget source="global.CurrentTime" render="NachtClockPixmap" path="/usr/share/enigma2/Nacht/clockneons/clockneon1/" mode="Volume" position="180,55" size="128,42" zPosition="5" alphatest="blend" transparent="1" />
+		<!-- <widget render="VolumeText" source="global.CurrentTime" position="160,50" size="140,60" font="LCD; 50" zPosition="9" backgroundColor="#000000" transparent="1" halign="center" valign="center" /> -->
+	</screen>
+	<screen name="Mute" flags="wfNoBorder" position="50,50" size="300,160" title="Mute" backgroundColor="transparent" transparent="0" zPosition="10">
+		<ePixmap name="" pixmap="Nacht/volume/mute4.png" position="0,0" size="300,160" zPosition="2" transparent="1" alphatest="blend" />
+	</screen>
+</skin>

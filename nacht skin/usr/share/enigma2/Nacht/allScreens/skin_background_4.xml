@@ -1,0 +1,19 @@
+<skin>
+	<colors>
+		<color name="background" value="#101112" />
+		<color name="black2" value="#121314" />
+		<color name="tb" value="#101112" />
+		<color name="csd" value="#0046c9ff" />
+		<color name="csds" value="#005fd0ff" />
+	</colors>
+  <screen name="ch">
+	<panel name="datetime" />
+	<ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="Nacht/images/backgrounds/ch4.png" alphatest="off" transparent="0" />
+	<widget source="Title" render="Label" position="50,3" size="734,30" font="Console; 26" foregroundColor="undddddd" backgroundColor="background" zPosition="99" transparent="1" />
+  </screen>
+
+	<screen name="pig">
+		<widget source="session.VideoPicture" render="Pig" position="1290,64" size="548,308" zPosition="1" backgroundColor="transparent" cornerRadius="20" />
+	</screen>
+
+</skin>

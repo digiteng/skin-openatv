@@ -1,0 +1,11 @@
+#!/bin/sh
+echo " " 
+echo "********************************************"   
+echo ""                                                    
+echo " Nacht skin successful installed...  "
+echo ""
+echo " ...now select skin Nacht..." 
+echo ""
+echo "********************************************"   
+echo ""
+exit 0

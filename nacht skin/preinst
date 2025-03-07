@@ -1,0 +1,17 @@
+#!/bin/sh                                                       
+rm -rf /usr/share/enigma2/Nacht
+rm -rf /usr/lib/enigma2/python/Components/Converter/Nacht*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/Nacht*
+rm -rf /usr/lib/enigma2/python/Tools/Nacht*
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "  Nacht skin successfully installing...      "
+echo "                                                                           " 
+echo "                                                                           "
+echo "                                                                           "
+exit 0

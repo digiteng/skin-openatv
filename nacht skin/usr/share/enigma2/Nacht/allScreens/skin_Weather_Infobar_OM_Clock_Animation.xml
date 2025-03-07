@@ -1,0 +1,42 @@
+<skin>
+<screen name="weather-infobar">
+  <ePixmap name="" pixmap="Nacht/images/weather/w-clock60.png" position="50,50" size="510,300" transparent="1" alphatest="off" zPosition="-1" />
+  <!-- date time -->
+  <widget source="global.CurrentTime" render="Label" position="90,215" size="200,30" font="Console; 24" backgroundColor="lightgrey" transparent="1" halign="center" zPosition="5" foregroundColor="gr4">
+    <convert type="ClockToText">Format:%a, %d.%m</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="305,215" size="200,30" font="Console; 24" backgroundColor="lightgrey" transparent="1" halign="center" zPosition="5" foregroundColor="gr4">
+    <convert type="ClockToText">Format:%Y</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="100,50" size="198,156" font="LCD; 140" halign="center" foregroundColor="gr4" backgroundColor="lightgrey" transparent="1" valign="center" zPosition="0">
+    <convert type="ClockToText">Format:%H</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="315,50" size="198,156" font="LCD; 140" halign="center" foregroundColor="gr4" backgroundColor="lightgrey" transparent="1" valign="center" zPosition="0">
+    <convert type="ClockToText">Format:%M</convert>
+  </widget>
+  <!-- weather google -->
+  <!-- <widget source="session.CurrentService" render="Label" position="75,260" size="300,75" zPosition="2" font="Regular; 20" halign="left"  noWrap="1" transparent="1" backgroundColor="background" foregroundColor="white"> -->
+  <!-- <convert type="NachtWeatherGooglec">current;%L,\n%D,\n%d,update</convert> -->
+  <!-- </widget> -->
+  <!-- cur icon -->
+  <!-- <widget source="session.CurrentService" render="NachtWeatherPixmap" path="/usr/share/enigma2/Nacht/WeatherIcons/" position="198,220" size="175,120" zPosition="3" transparent="1" alphatest="blend"> -->
+  <!-- <convert type="NachtWeatherGooglec">current;%i</convert> -->
+  <!-- </widget> -->
+  <!-- cur temp -->
+  <!-- <widget source="session.CurrentService" render="Label" position="330,262" size="170,70" zPosition="2" font="Regular; 50" halign="right" transparent="1" backgroundColor="background" foregroundColor="white">    -->
+  <!-- <convert type="NachtWeatherGooglec">current;%C</convert> -->
+  <!-- </widget> -->
+  <widget source="session.CurrentService" render="Label" position="75,260" size="300,75" zPosition="1" font="Regular; 24" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc">
+    <convert type="NachtWeatherOMc">current;update, %city, \n%date</convert>
+  </widget>
+  <!-- <widget source="session.CurrentService" render="Label" position="75,260" size="300,75" zPosition="1" font="Regular; 26" halign="left" transparent="1" backgroundColor="background" foregroundColor="fc"> -->
+  <!-- <convert type="NachtWeatherOMc">current;%date</convert> -->
+  <!-- </widget> -->
+  <widget source="session.CurrentService" render="NachtWeatherPixmap" mode="animation" position="250,220" size="115,115" zPosition="2" transparent="1" alphatest="blend">
+    <convert type="NachtWeatherOMc">current;%icon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="330,262" size="170,70" zPosition="1" font="meteo; 50" halign="right" transparent="1" backgroundColor="background" foregroundColor="fc">
+    <convert type="NachtWeatherOMc">current;%temp</convert>
+  </widget>
+</screen>
+</skin>

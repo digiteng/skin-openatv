@@ -1,0 +1,465 @@
+<skin>
+  <screen name="infobar">
+	<panel name="weather-infobar" />
+	<panel name="infobar_Poster" />
+	<panel name="picon10"/>
+	<!-- <constant-widget name="picon10"/> -->
+	<ePixmap position="0,830" size="1920,250" zPosition="-10" pixmap="Nacht/images/infobars/infobar9b.png" alphatest="off" transparent="0" />
+	<widget source="session.Event_Now" render="xtraBanner" position="0,400" size="762,141" zPosition="1" cornerRadius="20" />
+	<widget source="session.CurrentService" render="Label" position="380,855" size="950,40" zPosition="1" font="Console; 30" backgroundColor="#171a21" transparent="1">
+		<convert type="NachtServiceInfo">Name</convert>
+	</widget>
+	<widget source="session.Event_Now" backgroundColor="#171a21" font="Regular; 28" zPosition="2" halign="left" position="380,895" size="950,36" render="Label" transparent="1" foregroundColor="uncccccc">
+		<convert type="NachtEventInfo">EventNameCompact</convert>
+	</widget>
+	<widget source="session.Event_Next" backgroundColor="#171a21" font="Regular; 28" zPosition="2" halign="left" position="380,930" size="950,36" render="Label" transparent="1" foregroundColor="uncccccc">
+		<convert type="NachtEventInfo">EventNameCompact</convert>
+	</widget>
+	<widget source="session.Event_Now" render="Label" position="380,965" size="950,36" font="Regular; 22" transparent="1" zPosition="2" foregroundColor="uncccccc" backgroundColor="#171a21" halign="left" valign="center">
+		<convert type="NachtEventInfo2">SESSION_EPISODE,PARENTAL_RATING,GENRE,YEAR,DURATION</convert>
+	</widget>
+	<!-- ... -->
+	<!--SD-HD-FHD-UHD-->
+	<widget source="session.CurrentService" position="620,1004" size="96,40" render="Pixmap" pixmap="Nacht/nicons/e4b/sd.png" zPosition="2" alphatest="blend">
+		<convert type="ServiceInfo">IsSD</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" position="620,1004" size="96,40" render="Pixmap" pixmap="Nacht/nicons/e4b/hd.png" zPosition="2" alphatest="blend">
+		<convert type="ServiceInfo">IsHD</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" position="620,1004" size="96,40" render="Pixmap" pixmap="Nacht/nicons/e4b/fhd.png" zPosition="2" alphatest="blend">
+		<convert type="ServiceInfo">Is1080</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" position="620,1004" size="96,40" render="Pixmap" pixmap="Nacht/nicons/e4b/4k.png" zPosition="2" alphatest="blend">
+		<convert type="ServiceInfo">Is4K</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/dolby.png" position="380,1004" size="96,40" zPosition="2" alphatest="blend" transparent="1">
+		<convert type="ServiceInfo">IsMultichannel</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<!-- <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/crypto.png" position="984,1004" size="96,40" zPosition="2" alphatest="blend"> -->
+		<!-- <convert type="ServiceInfo">IsCrypted</convert> -->
+		<!-- <convert type="ConditionalShowHide" /> -->
+	<!-- </widget> -->
+	<widget source="session.CurrentService" render="NachtCrypted" pixmaps="/usr/share/enigma2/Nacht/nicons/e4b/crypt_on.png,/usr/share/enigma2/Nacht/nicons/e4b/crypt_off.png" position="984,1004" size="96,40" zPosition="9" backgroundColor="background" transparent="1" alphatest="blend" />
+  
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/fta.png" position="984,1004" size="96,40" zPosition="2" alphatest="blend">
+		<convert type="ServiceInfo">IsCrypted</convert>
+		<convert type="ConditionalShowHide">Invert</convert>
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" position="494,1002" size="96,40" zPosition="2" pixmap="Nacht/nicons/e4b/hbb.png" alphatest="blend" transparent="1">
+		<convert type="ServiceInfo">HasHBBTV</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/sub.png" position="1105,1004" zPosition="2" size="96,40" alphatest="blend" transparent="1">
+		<convert type="ServiceInfo">SubtitlesAvailable</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/43.png" position="743,1004" size="96,40" zPosition="2" alphatest="blend" transparent="1">
+		<convert type="ServiceInfo">IsNotWidescreen</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/169.png" position="743,1004" size="96,40" zPosition="3" alphatest="blend" transparent="1">
+		<convert type="ServiceInfo">IsWidescreen</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/e4b/dvb-s.png" position="864,1004" size="96,40" zPosition="3" transparent="1" alphatest="blend">
+		<convert type="FrontendInfo">TYPE</convert>
+		<convert type="ValueRange">0,0</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/e4b/dvb-c.png" position="864,1004" size="96,40" zPosition="3" transparent="1" alphatest="blend">
+		<convert type="FrontendInfo">TYPE</convert>
+		<convert type="ValueRange">1,1</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/e4b/dvb-t.png" position="864,1004" size="96,40" zPosition="3" transparent="1" alphatest="blend">
+		<convert type="FrontendInfo">TYPE</convert>
+		<convert type="ValueRange">2,2</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="session.RecordState" render="Pixmap" pixmap="Nacht/nicons/e4b/rec.png" position="1226,1004" zPosition="11" size="96,40" alphatest="blend" backgroundColor="#171a21" transparent="1">
+		<convert type="ConditionalShowHide">Blink</convert>
+	</widget>
+		
+
+	<!-- CircleProgress -->
+	<widget source="session.Event_Now" render="NachtCircleProgress" mode="event" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150orange.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="1358,855" size="150,150" zPosition="3" backgroundColor="#171a21" transparent="1">
+		<convert type="NachtSignal">Event</convert>
+	</widget>
+
+	<widget source="session.FrontendStatus" render="NachtCircleProgress" mode="event" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="1537,855" size="150,150" zPosition="3" backgroundColor="#171a21" transparent="1">
+		<convert type="NachtSignal">SNR</convert>
+	</widget>
+
+	<widget source="session.FrontendStatus" render="NachtCircleProgress" mode="event" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="1717,855" size="150,150" zPosition="3" backgroundColor="#171a21" transparent="1">
+		<convert type="NachtSignal">AGC</convert>
+	</widget>
+
+	<widget source="session.FrontendStatus" render="FixedLabel" text="!" font="Console; 30" zPosition="11" position="1684,1008" size="36,36" halign="center" backgroundColor="#171a21" valign="center" transparent="1" foregroundColor="red">
+		<convert type="NachtSignal">BER</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<!-- CircleProgress end -->
+  </screen>
+<!-- VOLUME -->
+<screen name="Volume" position="25,25" size="300,160" title="Volume" zPosition="55" backgroundColor="transparent" flags="wfNoBorder">
+	<ePixmap name="" position="0,0" size="300,160" pixmap="Nacht/volume/vol_back.png" alphatest="blend" zPosition="-1" />
+	<widget render="NachtCircleProgress" mode="volume" source="global.CurrentTime" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="140,5" size="150,150" backgroundColor="#000000" zPosition="3" transparent="1" />
+</screen>
+<screen name="Mute" flags="wfNoBorder" position="25,25" size="300,160" title="Mute" backgroundColor="transparent" zPosition="55">
+	<ePixmap name="" position="0,0" size="300,160" pixmap="Nacht/volume/vol_backX.png" alphatest="blend" zPosition="-1" />
+	<ePixmap name="" position="140,5" size="150,150" pixmap="Nacht/circleProgress/prgrs150back22.png" alphatest="blend" zPosition="5" />
+	<eLabel text="0" position="175,55" size="80,40" font="Console; 38" halign="center" foregroundColor="red" backgroundColor="background" transparent="1" zPosition="9" />
+</screen>
+  <!-- MEDIA -->
+  <screen name="MediaPlayer" position="0,0" size="1920,1080" title="MediaPlayer" flags="wfNoBorder" backgroundColor="transparent">
+	<ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/images/backgrounds/mediaplayer.png" alphatest="off" transparent="1" />
+	<widget name="filelist" backgroundColor="tb" itemHeight="50" position="55,75" size="800,555" transparent="1"  itemCornerRadius="10" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="background" />
+	<widget name="playlist" font="Regular; 30" backgroundColor="tb" itemHeight="50" position="1070,75" selectionDisabled="1" size="800,555" transparent="1"	 itemCornerRadius="10" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="background" />
+	<widget name="title" backgroundColor="tb" font="Console; 30" position="230,739" size="635,40" transparent="1" valign="center" foregroundColor="yellow" halign="left" />
+	<widget backgroundColor="tb" font="LCD; 40" halign="center" position="1344,949" render="Label" size="210,40" source="session.CurrentService" transparent="1" zPosition="4" foregroundColor="b8">
+		<convert type="ServicePosition">Position,ShowHours</convert>
+	</widget>
+	<widget backgroundColor="tb" font="Regular; 25" halign="center" position="1344,747" render="Label" size="210,40" source="session.CurrentService" transparent="1" zPosition="1" foregroundColor="lightgrey">
+		<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+	</widget>
+	<widget name="repeat" position="1259,975" size="50,21" pixmaps="icons/ico_noreplay.png,icons/ico_replay.png" transparent="1" alphatest="blend" />
+	<widget font="Regular; 30" name="artist" backgroundColor="tb" position="230,794" size="600,40" transparent="1" />
+	<widget font="Regular; 30" name="album" backgroundColor="tb" position="230,852" size="600,40" transparent="1" />
+	<widget font="Regular; 30" name="year" backgroundColor="tb" position="230,910" size="600,40" transparent="1" />
+	<widget font="Regular; 30" name="genre" position="231,967" size="600,40" transparent="1" backgroundColor="tb" />
+	<widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="1632,757" size="200,210" transparent="1" alphatest="blend" />
+	<!-- circle progress -->
+
+	<widget source="session.CurrentService" render="NachtCircleProgress" mode="service" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150orange.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="1374,792" size="150,150" backgroundColor="#14171b" zPosition="3" transparent="1">
+		<convert type="ServicePosition">Position</convert>
+	</widget>
+  </screen>
+<!-- MoviePlayer -->
+<screen name="MoviePlayer" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap name="" position="40,780" size="1840,225" pixmap="Nacht/images/infobars/infobarC.png" alphatest="blend" zPosition="-10" />
+  <widget source="session.CurrentService" render="Label" position="245,796" size="1210,40" backgroundColor="background" font="Regular; 32" halign="left" transparent="1" zPosition="1" foregroundColor="yellow">
+	<convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" backgroundColor="background" font="Regular; 28" halign="center" position="1515,822" render="Label" size="150,30" transparent="1" zPosition="4">
+	<convert type="ServicePosition">Position</convert>
+  </widget>
+  <!-- circle progress -->
+  <widget source="session.CurrentService" render="NachtCircleProgress" mode="service" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150orange.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back.png" position="1673,818" size="150,150" backgroundColor="background" zPosition="3" transparent="1">
+	<convert type="ServicePosition">Position</convert>
+  </widget>
+  <!-- ... -->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/dolby.png" position="451,939" size="80,50" zPosition="2" alphatest="blend">
+	<convert type="ServiceInfo">IsMultichannel</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/169.png" position="546,939" size="80,50" zPosition="2" alphatest="blend">
+	<convert type="ServiceInfo">IsWidescreen</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/sd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">IsSD</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/hd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">IsHD</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/fhd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">Is1080</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/uhd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">Is4K</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/nicons/rec.png" position="641,939" size="75,49" zPosition="3" alphatest="blend">
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/sub.png" position="253,939" size="80,50" alphatest="blend" halign="center" valign="center" backgroundColor="background" transparent="1" zPosition="2">
+	<convert type="ServiceInfo">SubtitlesAvailable</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1515,940" size="150,30" font="Regular; 28" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" zPosition="3">
+	<convert type="ServicePosition">Length</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="245,890" size="800,40" font="Console2; 26" backgroundColor="background" transparent="1" halign="left" noWrap="1" valign="center" zPosition="5">
+	<convert type="NachtServiceInfo">AVtype</convert>
+  </widget>
+  <widget render="VideoSize" source="session.CurrentService" position="245,843" size="800,40" backgroundColor="background" font="Console2;26" foregroundColor="lightgrey2" halign="left" valign="center" transparent="1" zPosition="5" />
+  <widget name="Cover" position="61,798" size="164,191" zPosition="1" backgroundColor="background" alphatest="blend" borderWidth="1" borderColor="blue" transparent="1" />
+</screen>
+
+  <!-- EMC -->
+<screen name="EMCMediaCenter" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+
+  <ePixmap name="" position="40,780" size="1840,225" pixmap="Nacht/images/infobars/infobarC.png" alphatest="blend" zPosition="-10" />
+  <widget source="session.CurrentService" render="Label" position="245,796" size="1210,40" backgroundColor="background" font="Regular; 32" halign="left" transparent="1" zPosition="1" foregroundColor="yellow">
+	<convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" backgroundColor="background" font="Regular; 28" halign="center" position="1515,822" render="Label" size="150,30" transparent="1" zPosition="4">
+	<convert type="ServicePosition">Position</convert>
+  </widget>
+  <!-- circle progress -->
+  <widget source="session.CurrentService" render="NachtCircleProgress" mode="service" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150orange.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back.png" position="1673,818" size="150,150" backgroundColor="background" zPosition="3" transparent="1">
+	<convert type="ServicePosition">Position</convert>
+  </widget>
+  <!-- ... -->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/dolby.png" position="451,939" size="80,50" zPosition="2" alphatest="blend">
+	<convert type="ServiceInfo">IsMultichannel</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/169.png" position="546,939" size="80,50" zPosition="2" alphatest="blend">
+	<convert type="ServiceInfo">IsWidescreen</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/sd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">IsSD</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/hd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">IsHD</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/fhd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">Is1080</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="Nacht/nicons/uhd.png" position="355,939" render="Pixmap" size="80,50" source="session.CurrentService" alphatest="blend">
+	<convert type="ServiceInfo">Is4K</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/nicons/rec.png" position="641,939" size="75,49" zPosition="3" alphatest="blend">
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/sub.png" position="253,939" size="80,50" alphatest="blend" halign="center" valign="center" backgroundColor="background" transparent="1" zPosition="2">
+	<convert type="ServiceInfo">SubtitlesAvailable</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1515,940" size="150,30" font="Regular; 28" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" zPosition="3">
+	<convert type="ServicePosition">Length</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="245,890" size="800,40" font="Console2; 26" backgroundColor="background" transparent="1" halign="left" noWrap="1" valign="center" zPosition="5">
+	<convert type="NachtServiceInfo">AVtype</convert>
+  </widget>
+  <widget render="VideoSize" source="session.CurrentService" position="245,843" size="800,40" backgroundColor="background" font="Console2;26" foregroundColor="lightgrey2" halign="left" valign="center" transparent="1" zPosition="5" />
+  <widget name="Cover" position="61,798" size="164,191" zPosition="1" backgroundColor="background" alphatest="blend" borderWidth="1" borderColor="blue" transparent="1" />
+</screen>
+  <screen name="PVRState" position="25,725" size="420,80" backgroundColor="transparent" flags="wfNoBorder" transparent="0">
+	<ePixmap name="" position="0,0" size="420,80" pixmap="Nacht/images/infobars/pvr2.png" alphatest="blend" zPosition="-1" />
+	<widget name="statusicon" pixmaps="media/play.png,media/pause.png,media/stop.png,media/forward.png,media/backward.png" zPosition="11" position="0,0" size="342,80" backgroundColor="background" alphatest="blend" transparent="1" />
+	<widget name="speed" position="350,15" size="70,50" font="Regular; 30" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="5" />
+  </screen>
+  <!-- SAT -->
+<screen name="Satfinder" position="0,0" size="1920,1080" title="Satfinder">
+	<eLabel position="80,80" size="1090,220" zPosition="0" backgroundColor="background" cornerRadius="20" transparent="0" />
+
+	<widget source="Frontend" render="NachtCircleProgress" mode="snr-agc" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150green2.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="275,90" size="150,150" zPosition="3" backgroundColor="background" transparent="1">
+		<convert type="NachtSignal">SNR</convert>
+	</widget>
+
+	<widget source="Frontend" render="NachtCircleProgress" mode="snr-agc" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150green2.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" 
+	position="850,90" size="150,150" zPosition="3" backgroundColor="background" transparent="1">
+		<convert type="NachtSignal">AGC</convert>
+	</widget>
+	
+	<!-- <widget source="Frontend" render="cProgress" position="275,90" size="90,90" font="klass;90" foregroundColor="#57ffff" backgroundColor="background" zPosition="9" transparent="1"> -->
+		<!-- <convert type="NachtSignal">SNR</convert> -->
+	<!-- </widget> -->
+	<!-- <widget source="Frontend" render="cProgress" position="850,90" size="90,90" font="klass;90" foregroundColor="#57ffff" backgroundColor="background" zPosition="9" transparent="1"> -->
+		<!-- <convert type="NachtSignal">AGC</convert> -->
+	<!-- </widget> -->
+
+	<eLabel name="snr" text="SNR" position="275,250" size="150,50" font="Console; 35" halign="center" transparent="1" />
+	<eLabel name="agc" text="AGC" position="850,250" size="150,50" font="Console; 35" halign="center" transparent="1" />
+	<eLabel name="ber" text="BER" position="585,250" size="100,50" font="Console; 35" halign="center" transparent="1" />
+	<widget source="Frontend" render="Label" position="539,190" size="200,50" font="Regular; 30" zPosition="2" transparent="1" foregroundColor="red" halign="center"> 
+		<convert type="NachtSignal">BER</convert> 
+	</widget>
+	<eLabel text="Lock:" position="80,328" size="100,50" font="Regular; 35" halign="right" transparent="1" />
+	<widget source="Frontend" render="Pixmap" pixmap="Nacht/icons/lock_on.png" position="199,331" zPosition="1" size="50,50" alphatest="on">
+		<convert type="NachtSignal">LOCK</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="Frontend" render="Pixmap" pixmap="Nacht/icons/lock_off.png" position="199,331" zPosition="1" size="50,50" alphatest="on">
+		<convert type="NachtSignal">LOCK</convert>
+		<convert type="ConditionalShowHide">Invert</convert>
+	</widget>
+	
+	<widget source="Frontend" render="Label" position="1337,143" zPosition="2" size="503,145" font="Regular; 100" transparent="1" halign="center">
+		<convert type="NachtSignal">SNR</convert>
+	</widget>
+	<panel name="ch" />
+	<widget name="introduction" position="70,1000" size="990,33" font="Regular;26" halign="center" backgroundColor="background" transparent="1" />
+	<ePixmap name="" pixmap="Nacht/logos/sat.png" position="1447,574" size="300,300" transparent="0" alphatest="blend" />
+	<widget name="config" itemHeight="50" position="68,400" size="1120,500" zPosition="5" transparent="1" font="Console; 30" scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarRadius="5" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black" />
+  </screen>
+
+<screen name="ServiceScan" position="0,0" size="1920,1080">
+	<panel name="ch" />
+	<panel name="pig" />
+	<widget source="FrontendInfo" render="Pixmap" pixmap="/usr/share/enigma2/Nacht/icons/scan-s.png" position="1514,635" size="100,100" zPosition="99" transparent="1" alphatest="blend">
+		<convert type="FrontendInfo">TYPE</convert>
+		<convert type="ValueRange">0,0</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="FrontendInfo" render="Pixmap" pixmap="/usr/share/enigma2/Nacht/icons/scan-c.png" position="1514,635" size="100,100" zPosition="99" transparent="1" alphatest="blend">
+		<convert type="FrontendInfo">TYPE</convert>
+		<convert type="ValueRange">1,1</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="FrontendInfo" render="Pixmap" pixmap="/usr/share/enigma2/Nacht/icons/scan-t.png" position="1514,635" size="100,100" zPosition="99" transparent="1" alphatest="blend">
+		<convert type="FrontendInfo">TYPE</convert>
+		<convert type="ValueRange">2,2</convert>
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget name="network" position="70,759" size="1100,40" font="Regular; 30" transparent="1" />
+	<widget name="transponder" position="70,799" size="1100,40" font="Regular; 30" transparent="1" />
+	<widget name="scan_state" position="70,840" zPosition="2" size="1100,40" font="Regular; 30" transparent="1" />
+	<widget name="pass" position="70,884" size="1100,40" font="Regular; 30" transparent="1" />
+	
+	<widget name="scan_progress" position="59,937" size="1130,1" foregroundColor="#00ffff" backgroundColor="background" zPosition="99" transparent="1" borderColor="gr2" borderWidth="0" />
+	
+	<!-- <widget name="scan_progress" position="59,937" size="90,90" font="klass; 90" foregroundColor="#ffff00" backgroundColor="background" zPosition="99" transparent="1" borderColor="gr2" borderWidth="0" /> -->
+	
+	
+	<!-- <ePixmap name="" position="1512,142" pixmap="Nacht/circleProgress/prgrs150back.png" size="150, 150" zPosition="8" transparent="1" alphatest="blend" /> -->
+	<!-- <widget name="circle_progress" position="1532,162" zPosition="9" size="110,110" font="klass; 90" transparent="1" /> -->
+	
+	<widget name="servicelist" position="70,65" size="1100,669" font="Regular;30" selectionDisabled="1" itemHeight="40" transparent="1" />
+	
+	<widget render="NachtCircleProgress" mode="scan" source="global.CurrentTime" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150green2.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" position="1501,151" size="150,150" backgroundColor="#000000" zPosition="3" transparent="1" />
+  
+</screen>
+
+  <!-- <screen name="Opkg" position="0,0" size="1920,1080" title="Software update" backgroundColor="transparent"> -->
+	<!-- <widget render="NachtCircleProgress" source="global.CurrentTime" mode="ipk_slider"  -->
+	<!-- pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png"  -->
+	<!-- pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png"	 -->
+	<!-- position="300,90" size="150,150" backgroundColor="background" zPosition="3" transparent="1" /> -->
+	
+	<!-- <widget render="NachtCircleProgress" source="global.CurrentTime" mode="ipk_aslider"  -->
+	<!-- pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150green2.png"  -->
+	<!-- pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png"	 -->
+	<!-- position="850,90" size="150,150" backgroundColor="background" zPosition="3" transparent="1" /> -->
+
+	<!-- <widget name="package" position="75,290" size="1100,100" font="Regular; 30" backgroundColor="background" transparent="1" /> -->
+	<!-- <widget name="status" position="75,776" size="1100,120" font="Regular; 30" backgroundColor="background" transparent="1" /> -->
+	<!-- <panel name="ch" /> -->
+	<!-- <panel name="pig" /> -->
+	<!-- <panel name="rgyb_all" /> -->
+	<!-- <panel name="ncht" /> -->
+	<!-- <ePixmap name="" pixmap="Nacht/logos/ipkinstall.png" position="1440,555" size="300,300" transparent="0" alphatest="blend" /> -->
+  <!-- </screen> -->
+	<!-- TIMESHIFTSTATE -->
+  <screen name="TimeshiftState" position="25,570" size="800,225" title=" " flags="wfNoBorder" backgroundColor="transparent">
+	<ePixmap name="" position="0,0" size="800,225" pixmap="Nacht/images/infobars/infobar_emc.png" alphatest="blend" zPosition="-1" />
+	<widget name="state" position="10,110" size="200,100" font="Console; 100" halign="center" backgroundColor="tb" transparent="1" />
+	<widget source="session.CurrentService" render="Label" position="10,55" size="200,40" font="Regular;30" transparent="1" halign="center">
+		<convert type="ServicePosition">Remaining</convert>
+	</widget>
+	<widget source="session.CurrentService" render="Label" position="230,55" size="200,40" font="Regular;30" halign="center" transparent="1">
+		<convert type="ServicePosition">Position</convert>
+	</widget>
+	<eLabel text="/" position="430,55" size="20,40" font="Regular;30" halign="center" transparent="1" />
+	<eLabel text="/" position="210,55" size="20,40" font="Regular;30" halign="center" transparent="1" />
+	<widget source="session.CurrentService" render="Label" position="450,55" size="200,40" font="Regular;30" transparent="1" halign="center">
+		<convert type="ServicePosition">Length</convert>
+	</widget>
+	<!-- <widget source="session.CurrentService" render="Progress" pixmap="Nacht/logos/circleProgress.png" backgroundColor="blue" position="0,33" size="1000,5" zPosition="2" transparent="1"> -->
+	<!-- <convert type="ServicePosition">Position</convert> -->
+	<!-- </widget> -->
+	<widget font="Console; 30" position="10,0" render="Label" size="775,40" source="session.CurrentService" halign="left" transparent="1">
+		<convert type="ServiceName">Name</convert>
+	</widget>
+	<!-- circle progress -->
+
+	<widget source="session.CurrentService" render="NachtCircleProgress" mode="service" 
+	pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150orange.png" 
+	pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png"	
+	position="650,36" size="150,150" backgroundColor="#000000" zPosition="3" transparent="1">
+		<convert type="ServicePosition">Position</convert>
+	</widget>
+	<!-- ... -->
+  </screen>
+  <!-- UPDATEPLUGIN -->
+  <!-- <screen name="UpdatePlugin" position="0,0" size="1920,1080" title="Software Update..." flags="wfNoBorder" backgroundColor="transparent"> -->
+	<!-- <panel name="ch" /> -->
+	<!-- <panel name="pig" /> -->
+	<!-- <widget name="package" position="75,290" size="1100,100" font="Regular; 30" backgroundColor="un99000000" transparent="1" /> -->
+	<!-- <widget name="status" position="75,776" size="1100,120" font="Regular; 30" backgroundColor="un99000000" transparent="1" /> -->
+	<!-- <ePixmap name="" pixmap="Nacht/logos/ipkinstall.png" position="1440,555" size="300,300" transparent="0" alphatest="blend" /> -->
+	<!-- circle progress -->
+	<!-- <eLabel position="57,57" size="1140,865" zPosition="-1" backgroundColor="un99000000" transparent="0" /> -->
+
+	<!-- <widget render="NachtCircleProgress" source="global.CurrentTime" mode="ipk_slider"  -->
+	<!-- pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png"  -->
+	<!-- pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png"  -->
+	<!-- position="300,90" size="150,150" backgroundColor="un99000000" zPosition="3" transparent="1" /> -->
+
+	<!-- <widget render="NachtCircleProgress" source="global.CurrentTime" mode="ipk_aslider"  -->
+	<!-- pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/pprgrs150green2.png"  -->
+	<!-- pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png"  -->
+	<!-- position="850,90" size="150,150" backgroundColor="un99000000" zPosition="3" transparent="1" /> -->
+	<!-- ... -->
+  <!-- </screen> -->
+	<!-- <screen name="Processing" position="0,0" size="1920,1080"> -->
+		<!-- <widget render="NachtCircleProgress" mode="Processing" source="global.CurrentTime" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150green2.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" position="center,center" size="150,150" backgroundColor="#000000" zPosition="3" cornerRadius="20" transparent="1" /> -->
+  
+	<!-- <screen name="Processing" title="Processing" position="center,center" size="150,150" flags="wfNoBorder" zPosition="+99" resolution="1280,720"> -->
+		<!-- <widget name="progress" position="center,center" size="90,90" foregroundColor="#00ffff" backgroundColor="#111122" font="klass; 90" cornerRadius="20" /> -->
+		<!-- <widget name="description" position="0,35" size="e,25" font="Regular;20" halign="center" /> -->
+	<!-- </screen> -->
+<screen name="disk_info">
+  <!-- <panel name="ch" /> -->
+  <widget source="session.FrontendStatus" render="NachtCircleProgress" mode="value" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" position="80,565" size="100,100" zPosition="3" backgroundColor="background" transparent="1">
+	<convert type="NachtDiskInfos">ram_info_progress</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="80,675" size="600,30" font="Regular; 22" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1">
+	<convert type="NachtDiskInfos">ram_info</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="NachtCircleProgress" mode="value" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" position="1075,565" size="100,100" zPosition="3" backgroundColor="background" transparent="1">
+	<convert type="NachtDiskInfos">swap_info_progress</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="575,675" size="600,30" font="Regular; 22" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1" halign="right">
+	<convert type="NachtDiskInfos">swap_info</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="NachtCircleProgress" mode="value" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" position="80,760" size="100,100" zPosition="3" backgroundColor="background" transparent="1">
+	<convert type="NachtDiskInfos">disk_info_progress</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="575,870" size="600,30" font="Regular; 22" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1" halign="right">
+	<convert type="NachtDiskInfos">flash_info</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="NachtCircleProgress" mode="value" pixmapCircle="/usr/share/enigma2/Nacht/circleProgress/prgrs150blue1.png" pixmapCircleBack="/usr/share/enigma2/Nacht/circleProgress/prgrs150back2.png" position="1075,760" size="100,100" zPosition="3" backgroundColor="background" transparent="1">
+	<convert type="NachtDiskInfos">flash_info_progress</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="80,870" size="600,30" font="Regular; 22" transparent="1" foregroundColor="fc" backgroundColor="background" zPosition="1">
+	<convert type="NachtDiskInfos">disk_info</convert>
+  </widget>
+  <eLabel name="" position="58,548" size="1137,373" cornerRadius="20" transparent="0" backgroundColor="background" zPosition="0" />
+</screen>
+</skin>

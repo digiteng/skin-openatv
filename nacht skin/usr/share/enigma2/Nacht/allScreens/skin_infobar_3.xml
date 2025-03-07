@@ -1,0 +1,84 @@
+<skin>  
+<screen name="infobar">
+  <ePixmap position="40,480" size="460,562" zPosition="-10" pixmap="Nacht/images/infobars/infobar_3.png" alphatest="off" transparent="0" />
+  <panel name="picon3" />
+  <!-- <widget source="session.Event_Now" render="xtraBackdrop" position="120,500" size="300,169" zPosition="2" /> -->
+  <widget source="session.CurrentService" render="Label" position="50,691" size="435,40" zPosition="1" font="Console; 28" backgroundColor="black" transparent="1">
+    <convert type="NachtServiceInfo">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular; 28" position="50,500" size="70,170" foregroundColor="fc" backgroundColor="black" transparent="1" valign="center" halign="center">
+    <convert type="NachtServiceInfo">Number</convert>
+  </widget>
+  <widget source="session.Event_Now" backgroundColor="black" font="Regular; 24" zPosition="2" halign="left" position="50,734" size="435,32" render="Label" transparent="1" foregroundColor="uncccccc">
+    <convert type="NachtEventInfo">EventNameCompactShort</convert>
+  </widget>
+  <widget source="session.Event_Next" backgroundColor="black" font="Console2; 22" zPosition="2" halign="left" position="50,770" size="435,32" render="Label" transparent="1" foregroundColor="uncccccc">
+    <convert type="NachtEventInfo">EventNameCompactShort</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" font="Regular; 30" zPosition="3" backgroundColor="black" position="50,815" size="450,40" transparent="1" halign="center">
+    <convert type="NachtSignal">Event_Percent</convert>
+  </widget>
+  <eLabel name="" position="55,870" size="440,2" backgroundColor="gr" transparent="0" />
+  <widget source="session.Event_Now" render="Progress" position="50,856" size="450,30" backgroundColor="black" pixmap="Nacht/images/progress/progress_3c.png" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="50,900" size="435,30" font="Regular; 20" transparent="1" zPosition="2" foregroundColor="uncccccc" backgroundColor="black" halign="left" valign="center">
+    <convert type="NachtEventInfo2">SESSION_EPISODE,PARENTAL_RATING,GENRE,YEAR,DURATION</convert>
+  </widget>
+  <widget source="session.Event_Now" render="xtraStar2" position="120,648" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+  <widget source="session.Event_Now" render="xtraParental" position="375,625" size="45,45" alphatest="blend" zPosition="9" transparent="1" />
+  <widget source="session.FrontendStatus" render="Label" font="Regular; 30" zPosition="3" backgroundColor="black" position="50,950" size="200,40" transparent="1">
+    <convert type="NachtSignal">SNR_LABEL</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="251,950" size="250,40" font="Regular; 30" backgroundColor="black" transparent="1" halign="center" noWrap="1" valign="center" text="19.2E" zPosition="3" foregroundColor="white">
+    <convert type="NachtServiceInfo">Orbital</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="FixedLabel" text="!" font="Console; 30" position="250,950" size="40,40" foregroundColor="red" backgroundColor="black" halign="center" valign="center" transparent="1" zPosition="11">
+    <convert type="NachtSignal">BER</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--SD-HD-FHD-UHD-->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/hbb.png" position="45,1000" size="96,40" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="ServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/sd.png" position="125,1000" size="96,40" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsSD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/hd.png" position="125,1000" size="96,40" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/fhd.png" position="125,1000" size="96,40" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">Is1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/4k.png" position="125,1000" size="96,40" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">Is4K</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/crypto_3.png" position="200,1000" size="96,40" zPosition="2" alphatest="blend"> -->
+    <!-- <convert type="ServiceInfo">IsCrypted</convert> -->
+    <!-- <convert type="ConditionalShowHide" /> -->
+  <!-- </widget> -->
+  <widget source="session.CurrentService" render="NachtCrypted" pixmaps="/usr/share/enigma2/Nacht/nicons/e4b/crypt_on.png,/usr/share/enigma2/Nacht/nicons/e4b/crypt_off.png" position="200,1000" size="96,40" zPosition="9" backgroundColor="background" transparent="1" alphatest="blend" />
+  
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/fta.png" position="200,1000" size="96,40" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/dolby_2.png" position="275,1000" size="96,40" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/e4b/sub_3.png" position="360,1000" zPosition="2" size="96,40" alphatest="blend" transparent="1">
+    <convert type="ServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/nicons/e4b/rec_2.png" position="420,1000" zPosition="11" size="96,40" alphatest="blend" backgroundColor="black" transparent="1">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+</screen>
+
+</skin>   

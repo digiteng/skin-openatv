@@ -1,0 +1,52 @@
+<skin>
+<screen name="SecondInfoBar" position="0,0" size="1920,1080" title="Programm Info" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
+    <widget source="Title" render="Label" position="50,0" size="1100,30" font="Console; 26" foregroundColor="undddddd" backgroundColor="background" zPosition="99" transparent="1" />
+    <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/images/backgrounds/gepg.png" alphatest="off" transparent="1" />
+	<panel name="datetime" />
+	<!-- NOW -->
+    <widget source="session.Event_Now" render="xtraPoster" position="85,100" size="185,278" zPosition="2" cornerRadius="20" />
+    <widget source="ServiceEvent" render="xtraBackdrop" position="85,100" size="185,100" zPosition="1" cornerRadius="10" />
+    <widget source="session.Event_Now" render="xtraParental" position="209,317" size="60,60" alphatest="blend" zPosition="9" transparent="1" />
+    <widget source="session.Event_Now" render="xtraStar2" position="85,407" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+    <widget source="session.Event_Now" render="Label" position="287,100" size="500,278" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+      <convert type="xtraInfo">Title,Year,Rated,Genre,Type,Country,Duration,SE</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="850,100" size="975,330" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+      <convert type="xtraInfo">Description</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="85,430" size="270,30" font="Regular; 24" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+      <convert type="xtraInfo">imdbRating</convert>
+    </widget>
+	<!-- NEXT -->
+    <widget source="session.Event_Next" render="xtraPoster" position="85,520" size="185,278" zPosition="2" cornerRadius="20" />
+    <widget source="ServiceEvent" render="xtraBackdrop" position="85,520" size="185,100" zPosition="1" cornerRadius="10" />
+    <widget source="session.Event_Next" render="xtraParental" position="209,737" size="60,60" alphatest="blend" zPosition="9" transparent="1" />
+    <widget source="session.Event_Next" render="xtraStar2" position="85,822" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+    <widget source="session.Event_Next" render="Label" position="287,520" size="500,278" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+      <convert type="xtraInfo">Title,Year,Rated,Genre,Type,Country,Duration,SE</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="850,520" size="975,330" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+      <convert type="xtraInfo">Description</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="85,850" size="270,30" font="Regular; 24" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+      <convert type="xtraInfo">imdbRating</convert>
+    </widget>
+<!-- ... -->
+    <widget source="session.CurrentService" render="Label" position="71,1015" size="1096,40" font="Regular; 30" backgroundColor="background" transparent="1" halign="left" noWrap="1" valign="center" zPosition="5" foregroundColor="yellow">
+      <convert type="NachtServiceInfo">AVtype</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" backgroundColor="background" position="71,971" size="1000,40" transparent="1" zPosition="5" font="Regular; 30" halign="left" foregroundColor="b3">
+      <convert type="CryptoInfo">VerboseInfo</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1208,1015" size="50,50" pixmap="Nacht/nicons/lan.png" zPosition="4" alphatest="blend" transparent="1">
+      <convert type="NachtRouteInfo">Lan</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1205,1015" size="55,55" pixmap="Nacht/nicons/wifi2.png" zPosition="4" alphatest="blend" transparent="1">
+      <convert type="NachtRouteInfo">Wifi</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- ... -->
+  </screen>
+
+</skin> 

@@ -1,0 +1,269 @@
+
+<skin>
+<screen name="infobar">
+  <ePixmap position="40,645" size="1840,398" zPosition="-10" pixmap="Nacht/images/infobars/infobar8.png" alphatest="off" transparent="0" />
+  <!--datetime-->
+
+  <panel name="picon8" />
+  <!--date-->
+
+    <widget render="NachtClockPixmap" source="global.CurrentTime" path="/usr/share/enigma2/Nacht/clockneons/clockneon1/" position="1710,920" size="128,42" zPosition="5" backgroundColor="transparent" alphatest="blend" transparent="1" />
+    <widget source="global.CurrentTime" render="Pixmap" pixmap="/usr/share/enigma2/Nacht/clockneons/clockneon1/blink.png" position="1710,920" size="128,42" alphatest="blend" transparent="1" zPosition="6">
+      <convert type="NachtAlwaysTrue" />
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+  <widget source="global.CurrentTime" render="NachtClockPixmap" path="/usr/share/enigma2/Nacht/clockneons/green/" mode="DayMounth" position="1728,855" size="80,26" halign="right" zPosition="5" alphatest="blend" transparent="1" />
+  <widget source="global.CurrentTime" render="NachtClockPixmap" path="/usr/share/enigma2/Nacht/clockneons/orange/" mode="Year" position="1728,1005" size="80,26" halign="left" zPosition="5" alphatest="blend" transparent="1" />
+  <!--EVENT-->
+  <widget source="session.CurrentService" render="Label" halign="center" position="48,575" size="1826,200" zPosition="1" font="Regular; 150" transparent="1" backgroundColor="transparent" foregroundColor="white">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" backgroundColor="tb" font="Regular; 40" zPosition="2" halign="left" position="540,865" render="NachtRunningText" options="movetype=running,startpoint=0,startdelay=1000,steptime=10,wrap=0,always=0,repeat=2,oneshot=1" size="800,50" transparent="1" valign="center">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" backgroundColor="tb" font="Regular; 40" halign="left" position="540,975" render="Label" size="800,50" transparent="1" zPosition="5" valign="top">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <eLabel name="" text="(" position="1348,977" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <eLabel name="" text=")" position="1535,977" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <widget source="session.Event_Next" render="Label" position="1363,977" size="170,40" backgroundColor="tb" transparent="1" zPosition="5" foregroundColor="lightgrey2" font="Regular; 30" halign="center">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" position="530,930" size="1016,30" pixmap="Nacht/images/progress/progress_10b.png" alphatest="blend" transparent="1" zPosition="3">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <eLabel name="" text="(" position="1348,866" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <eLabel name="" text=")" position="1535,866" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <widget source="session.Event_Now" backgroundColor="tb" font="Regular; 30" halign="center" zPosition="3" position="1363,866" render="Label" size="170,40" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <!--SNR-AGC-BER-->
+  <widget source="session.FrontendStatus" render="Progress" pixmap="Nacht/images/progress/snr1_8.png" orientation="orBottomToTop" position="1581,854" size="24,151" alphatest="blend" transparent="1" zPosition="2">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Progress" orientation="orBottomToTop" transparent="1" zPosition="2" pixmap="Nacht/images/progress/snr1_8.png" position="1642,854" size="24,151">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" font="Regular; 16" position="1601,854" size="50,20" backgroundColor="tb" alphatest="blend" transparent="1" zPosition="3" halign="left">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" font="Regular; 16" size="50,20" backgroundColor="tb" transparent="1" zPosition="3" position="1659,854" halign="center">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1208,788" size="130,40" font="Regular; 26" halign="center" valign="center" backgroundColor="tb" transparent="1" zPosition="2">
+    <convert type="ServiceOrbitalPosition" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" backgroundColor="tb"  position="1362,788" size="297,40" font="Regular; 26" transparent="1" halign="center" valign="center" zPosition="2">
+    <convert type="NachtServiceInfo">Resolution</convert>
+  </widget>
+	<widget source="session.CurrentService" render="Label" position="1665,788" size="200,40"  font="Regular; 26" halign="center" valign="center"  noWrap="1" backgroundColor="tb" transparent="1">
+		<convert type="ServiceName2">Bouquet</convert>
+	</widget>
+  <!--TUNER-->
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/a.png" position="1141,785" zPosition="3" size="50,50" alphatest="blend" backgroundColor="tb" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/b.png" position="1141,785" zPosition="3" size="50,50" alphatest="blend" backgroundColor="tb" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/c.png" position="1141,785" zPosition="3" size="50,50" alphatest="blend" backgroundColor="tb" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="Nacht/nicons/d.png" position="1141,785" zPosition="3" size="50,50" alphatest="blend" backgroundColor="tb" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--SD-HD-FHD-UHD-->
+  <ePixmap name="" pixmap="Nacht/nicons/buton2.png" position="45,785" size="407,49" transparent="0" alphatest="blend" />
+  <widget source="session.CurrentService" position="378,785" size="100,70" render="Pixmap" pixmap="Nacht/nicons/sd.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,719</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="378,785" size="100,70" render="Pixmap" pixmap="Nacht/nicons/hd.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">720,1079</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="379,785" size="100,70" render="Pixmap" pixmap="Nacht/nicons/fhd.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">721,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="379,785" size="100,70" render="Pixmap" pixmap="Nacht/nicons/uhd.png" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">1081,5000</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--INF-->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/dolby.png" position="45,785" size="100,49" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/txt.png" position="219,785" size="50,49" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/crypt.png" position="262,785" size="40,49" zPosition="2" alphatest="blend"> -->
+    <!-- <convert type="ServiceInfo">IsCrypted</convert> -->
+    <!-- <convert type="ConditionalShowHide" /> -->
+  <!-- </widget> -->
+  <widget source="session.CurrentService" render="NachtCrypted" pixmaps="/usr/share/enigma2/Nacht/nicons/crypt_on.png,/usr/share/enigma2/Nacht/nicons/crypt_off.png" position="262,785" size="40,49"  zPosition="9" backgroundColor="background" transparent="1" alphatest="blend" />
+
+  <widget source="session.CurrentService" render="Pixmap" position="298,785" size="100,49" zPosition="2" pixmap="Nacht/nicons/hbbtv.png" alphatest="blend" transparent="1">
+    <convert type="ServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/sub.png" position="171,785" zPosition="2" size="50,49" alphatest="blend">
+    <convert type="ServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/43.png" position="114,785" size="60,49" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="ServiceInfo">IsNotWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/169.png" position="114,785" size="60,49" zPosition="3" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/nicons/rec.png" position="567,782" zPosition="3" size="75,50">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="45,1009" size="419,30" font="Regular; 25" halign="center" backgroundColor="tb" transparent="1" zPosition="8" foregroundColor="und6ff98">
+    <convert type="ServiceName">Provider</convert>
+  </widget>
+  <!--SOFTCAM-->
+  <ePixmap name="" pixmap="Nacht/nicons/c0/cryp.png" position="635,783" size="490,50" transparent="0" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ex2.png" position="636,783" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" alphatest="blend" zPosition="2" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">ExsCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ex.png" position="636,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">ExsEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/be2.png" position="686,783" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">BetaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/be.png" position="686,783" size="40,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">BetaEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/dr2.png" position="731,783" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">DreamCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/dr.png" position="731,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="NachtCaidInfo2">DreamEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ird2.png" position="781,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">IrdCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/ird.png" position="781,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="NachtCaidInfo2">IrdEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/seca2.png" position="801,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">SecaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/seca.png" position="801,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">SecaEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/v2.png" position="828,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">ViaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/v.png" position="828,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" zPosition="3" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">ViaEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/n2.png" position="860,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">NagraCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/n.png" position="860,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="NachtCaidInfo2">NagraEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/cw2.png" position="891,783" size="45,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">CrwCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/cw.png" position="891,783" size="55,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="NachtCaidInfo2">CrwEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/nd2.png" position="946,783" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">NdsCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/nd.png" position="946,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="NachtCaidInfo2">NdsEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/co2.png" position="997,783" size="40,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">ConaxCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/co.png" position="997,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" zPosition="3" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">ConaxEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/biss2.png" position="1038,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="yellow" zPosition="2" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">BisCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/biss.png" position="1038,783" size="50,50" halign="center" backgroundColor="black" foregroundColor="blue" zPosition="3" alphatest="blend" transparent="1">
+    <convert type="NachtCaidInfo2">BisEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/pw.png" position="1064,783" zPosition="2" size="55,50" alphatest="blend" backgroundColor="tb" transparent="1">
+    <convert type="NachtCaidInfo2">PowerVuEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/pw.png" pposition="1064,783" size="50,37" alphatest="blend" zPosition="3" transparent="1" position="1064,783">
+    <convert type="NachtCaidInfo2">PowerVuEcm</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/c0/pw2.png" position="1064,783" size="50,37" alphatest="blend" zPosition="3" transparent="1">
+    <convert type="NachtCaidInfo2">PowerVuCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- ... -->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/fta.png" position="451,785" size="71,50" halign="center" alphatest="blend" backgroundColor="black" zPosition="1" valign="center" transparent="1">
+    <convert type="NachtServiceInfo">isFta</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/net.png" position="452,785" size="70,50" halign="center" alphatest="blend" backgroundColor="black" zPosition="2" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">Net</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/crd.png" position="454,785" size="70,50" halign="center" alphatest="blend" backgroundColor="black" zPosition="3" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">Crd</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/nicons/emu.png" position="451,785" size="70,50" halign="center" alphatest="blend" backgroundColor="black" zPosition="4" valign="center" transparent="1">
+    <convert type="NachtCaidInfo2">Emu</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="icons/ico_stream_off.png" position="524,799" size="30,30" zPosition="0" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_stream.png" position="524,799" size="30,30" zPosition="3" alphatest="blend">
+    <convert type="NachtServiceInfo">isStream</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+</screen>
+</skin>  

@@ -1,0 +1,29 @@
+<skin>
+	<screen name="channelselection">
+		<panel name="ch" />
+		<panel name="rgyb_all" />
+		<panel name="pig" />
+		<!-- <panel name="datetime" /> -->
+		<widget name="list" position="68,64" size="1120,600" backgroundColor="background" alphatest="blend" transparent="1" zPosition="1" 
+		itemHeight="50" serviceItemHeight="50" serviceNumberFont="Regular;30" serviceNameFont="Regular;30" serviceInfoFont="Console2;22" 
+		foregroundColor="fc" foregroundColorSelected="fcs" colorServiceDescription="csd" colorServiceDescriptionSelected="csds" 
+		colorServiceRecording="red" foregroundColorServiceNotAvail="gr" colorEventProgressbar="b7" colorEventProgressbarSelected="b7" 
+		colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" 
+		scrollbarMode="showOnDemand" scrollbarBackgroundColor="#444444" scrollbarRadius="5" scrollbarWidth="1" scrollbarSliderForegroundColor="teal" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="black" 
+		fieldMargins="15" nonplayableMargins="15" itemsDistances="8" 
+		progressBarWidth="90" progressbarHeight="10" progressPercentWidth="90" progressbarBorderWidth="1" />
+		<widget render="NachtEvents" source="ServiceEvent" eventNumber="4" position="1274,791" size="600,140" font="Regular; 28" noWrap="1" zPosition="2" transparent="1" />
+		<!-- xtraEvent -->
+		<widget source="ServiceEvent" render="xtraPoster" position="1275,435" size="185,278" zPosition="2" cornerRadius="20" />
+		<widget source="ServiceEvent" render="xtraBackdrop" position="1275,435" size="185,100" zPosition="1" cornerRadius="10" />
+		<widget source="ServiceEvent" render="xtraParental" position="1400,652" size="60,60" alphatest="blend" zPosition="9" transparent="1" />
+		<widget source="ServiceEvent" render="xtraStar2" position="1275,720" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+		<widget source="ServiceEvent" render="Label" position="1475,435" size="400,278" font="Regular; 26" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="top">
+			<convert type="xtraInfo">Title,Year,Rated,Genre,Type,Country,Duration,SE</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1275,745" size="270,30" font="Regular; 24" halign="left" transparent="1" zPosition="2" backgroundColor="background" valign="center">
+			<convert type="xtraInfo">imdbRating</convert>
+		</widget>
+		<widget source="ServiceEvent" render="xtraBackdropList" mode="trio" fontSize="22" position="68,701" size="1122,225" backgroundColor="#90000000" zPosition="99" cornerRadius="20" transparent="1" />
+	</screen>
+</skin>  

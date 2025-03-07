@@ -1,0 +1,51 @@
+<skin>
+  <screen name="rgyb_red">
+    <ePixmap pixmap="Nacht/images/rgyb/rgyb5_red.png" position="45,1010" size="350,70" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+    <widget source="key_red" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb5_red.png" position="45,1010" size="350,70" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget name="key_red" position="117,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_red,Button,Label" transparent="1" />
+    <widget source="key_red" render="Label" position="117,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_red,StaticText" transparent="1" />
+  </screen>
+  <screen name="rgyb_green">
+    <ePixmap pixmap="Nacht/images/rgyb/rgyb5_green.png" position="350,1010" size="350,70" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+    <widget source="key_green" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb5_green.png" position="350,1010" size="350,70" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget name="key_green" position="420,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_green,Button,Label" transparent="1" />
+    <widget source="key_green" render="Label" position="420,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_green,StaticText" transparent="1" />
+  </screen>
+  <screen name="rgyb_yellow">
+    <ePixmap pixmap="Nacht/images/rgyb/rgyb5_yellow.png" position="655,1010" size="350,70" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+    <widget source="key_yellow" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb5_yellow.png" position="655,1010" size="350,70" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget name="key_yellow" position="725,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_yellow,Button,Label" transparent="1" />
+    <widget source="key_yellow" render="Label" position="725,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_yellow,StaticText" transparent="1" />
+  </screen>
+  <screen name="rgyb_blue">
+    <ePixmap pixmap="Nacht/images/rgyb/rgyb5_blue.png" position="960,1012" size="350,70" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+    <widget source="key_blue" render="Pixmap" pixmap="Nacht/images/rgyb/rgyb5_blue.png" position="960,1010" size="350,70" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget name="key_blue" position="1030,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_blue,Button,Label" transparent="1" />
+    <widget source="key_blue" render="Label" position="1030,1010" size="235,70" noWrap="1" zPosition="+1" valign="center" font="Console;24" halign="left" backgroundColor="background" foregroundColor="fc" objectTypes="key_blue,StaticText" transparent="1" />
+  </screen>
+  <screen name="rgyb_menu">
+    <ePixmap pixmap="Nacht/images/rgyb/rgyb3_red.png" position="45,1010" size="350,70" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_green.png" position="350,1010" size="350,70" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_yellow.png" position="655,1010" size="350,70" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+	<ePixmap pixmap="Nacht/images/rgyb/rgyb3_blue.png" position="960,1012" size="350,70" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+    <widget name="red" render="Label" position="115,970" size="235,92" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="green" render="Label" position="390,970" size="235,92" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="yellow" render="Label" position="665,970" size="235,92" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="blue" render="Label" position="940,970" size="235,92" valign="center" halign="center" zPosition="1" font="Console;24" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+  </screen>
+  <screen name="rgyb_all">
+    <panel name="rgyb_red" />
+    <panel name="rgyb_green" />
+    <panel name="rgyb_yellow" />
+    <panel name="rgyb_blue" />
+  </screen>
+  
+</skin>

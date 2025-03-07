@@ -1,0 +1,55 @@
+<skin>
+	<colors>
+		<color name="selbar" value="background" />
+	</colors>
+  <windowstyle type="skinned" id="0">
+	<title font="Console;30" offset="30,5" />
+	<color name="Background" color="black" />
+	<color name="LabelForeground" color="lightgrey" />
+	<color name="ListboxBackground" color="black" />
+	<color name="ListboxForeground" color="lightgrey" />
+	<color name="ListboxSelectedBackground" color="selbar" />
+	<color name="ListboxSelectedForeground" color="white" />
+	<color name="ListboxMarkedBackground" color="black" />
+	<color name="ListboxMarkedForeground" color="red" />
+	<color name="ListboxMarkedAndSelectedBackground" color="selbar" />
+	<color name="ListboxMarkedAndSelectedForeground" color="red" />
+	<color name="WindowTitleForeground" color="lightgrey2" />
+	<color name="WindowTitleBackground" color="black" />
+	<borderset name="bsWindow">
+	  <pixmap filename="Nacht/window/top_left_corner.png" pos="bpTopLeft" />
+	  <pixmap filename="Nacht/window/top_edge.png" pos="bpTop" />
+	  <pixmap filename="Nacht/window/top_right_corner.png" pos="bpTopRight" />
+	  <pixmap filename="Nacht/window/left_edge.png" pos="bpLeft" />
+	  <pixmap filename="Nacht/window/right_edge.png" pos="bpRight" />
+	  <pixmap filename="Nacht/window/bottom_left_corner.png" pos="bpBottomLeft" />
+	  <pixmap filename="Nacht/window/bottom_edge.png" pos="bpBottom" />
+	  <pixmap filename="Nacht/window/bottom_right_corner.png" pos="bpBottomRight" />
+	</borderset>
+	<borderset name="bsListboxEntry">
+	  <pixmap filename="Nacht/images/sel2/sel_1120x50_topBlue.png" pos="bpTop" />
+	  <pixmap filename="Nacht/images/sel2/sel_1120x50_bottomBlue.png" pos="bpBottom" />
+	  <!-- <pixmap filename="Nacht/images/sel/select.png" pos="bpAll" /> -->
+	</borderset>
+  </windowstyle>
+  <windowstyle type="skinned" id="1">
+	<color name="Background" color="background" />
+	<color name="LabelForeground" color="white" />
+	<color name="ListboxBackground" color="background" />
+	<color name="ListboxForeground" color="white" />
+	<color name="ListboxSelectedBackground" color="transparent" />
+	<color name="ListboxSelectedForeground" color="white" />
+	<color name="ListboxMarkedBackground" color="background" />
+	<color name="ListboxMarkedForeground" color="white" />
+	<color name="ListboxMarkedAndSelectedBackground" color="transparent" />
+	<color name="ListboxMarkedAndSelectedForeground" color="red" />
+	<color name="WindowTitleForeground" color="white" />
+	<color name="WindowTitleBackground" color="background" />
+  </windowstyle>
+</skin>
+
+
+
+
+
+

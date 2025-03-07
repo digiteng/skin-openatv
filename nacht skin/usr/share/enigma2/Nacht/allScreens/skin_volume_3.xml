@@ -1,0 +1,11 @@
+<skin>
+  <screen name="Volume" position="40,40" size="500,100" title="Volume" backgroundColor="transparent" zPosition="55" flags="wfNoBorder">
+	<ePixmap name="" position="0, 0" size="500,100" pixmap="/usr/share/enigma2/Nacht/volume/vol_back3.png" zPosition="-1" alphatest="blend" />
+	<widget name="Volume" position="68,54" size="406,22" pixmap="/usr/share/enigma2/Nacht/volume/val3.png" alphatest="blend"  />
+	<widget render="NachtVolPxmp" source="global.CurrentTime" path="/usr/share/enigma2/Nacht/volume/vol_text3.png" position="40,16" size="400,39" zPosition="1" alphatest="blend" transparent="1" />
+	<widget render="NachtLiveVolumeText" source="global.CurrentTime" position="50,15" size="400,30" font="Regular; 25" zPosition="3" foregroundColor="#ffffff" backgroundColor="#274862" transparent="1" />
+  </screen>
+  <screen name="Mute" flags="wfNoBorder" position="40,40" size="500,100" title="Mute" backgroundColor="transparent" zPosition="55">
+    <ePixmap name="" position="0, 0" size="500,100" pixmap="/usr/share/enigma2/Nacht/volume/vol_back3.png" zPosition="-1" alphatest="blend" />
+  </screen>
+</skin> 
